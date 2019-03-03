@@ -3,7 +3,7 @@ email:             nilotic2@gmail.com
 description:       Summarized WWDC sessions
 author:            Den Jo
 baseurl:           "/WWDC"
-url:               "http://nilotic.github.io"
+url:               "https://nilotic.github.io"
 
 # Social Profiles
 twitter_username:  nilotic2
