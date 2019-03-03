@@ -1,14 +1,14 @@
-title:             Den's blog
-email:             nilotic2@gmail.com
-description:       Summarized WWDC sessions
-author:            Den Jo
-baseurl:           "/WWDC"
-url:               "https://nilotic.github.io"
+title:             Clean Blog
+email:             your-email@example.com
+description:       A Blog Theme by Start Bootstrap
+author:            Start Bootstrap
+baseurl:           "/startbootstrap-clean-blog-jekyll"
+url:               "http://blackrockdigital.github.io"
 
 # Social Profiles
-twitter_username:  nilotic2
-github_username:   nilotic
-facebook_username: nilotic
+twitter_username:  SBootstrap
+github_username:   BlackrockDigital
+facebook_username: StartBootstrap
 
 # Build settings
 markdown:          kramdown
