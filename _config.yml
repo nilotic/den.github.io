@@ -3,8 +3,7 @@ email:             nilotic2@gmail.com
 description:       Summaried WWDC sessions
 author:            Den
 baseurl:           "/wwdc"
-url:               "http://nilotic.github.io"
-theme:             jekyll-theme-clean-blog
+url:               "https://nilotic.github.io"
 
 # Social Profiles
 twitter_username:  nilotic
@@ -13,7 +12,7 @@ facebook_username: nilotic
 
 # Build settings
 markdown:          kramdown
-paginate:          50
+paginate:          5
 paginate_path:     "/posts/page:num/"
 plugins:
   - jekyll-feed
