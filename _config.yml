@@ -1,18 +1,18 @@
-title:             Clean Blog
-email:             your-email@example.com
-description:       A Blog Theme by Start Bootstrap
-author:            Start Bootstrap
-baseurl:           "/startbootstrap-clean-blog-jekyll"
-url:               "http://blackrockdigital.github.io"
+title:             Den's Blog
+email:             nilotic2@gmail.com
+description:       Summaried WWDC sessions
+author:            Den
+baseurl:           "/wwdc"
+url:               "http://nilotic.github.io"
 
 # Social Profiles
-twitter_username:  SBootstrap
-github_username:   BlackrockDigital
-facebook_username: StartBootstrap
+twitter_username:  nilotic
+github_username:   nilotic
+facebook_username: nilotic
 
 # Build settings
 markdown:          kramdown
-paginate:          5
+paginate:          50
 paginate_path:     "/posts/page:num/"
 plugins:
   - jekyll-feed
