@@ -4,6 +4,7 @@ description:       Summaried WWDC sessions
 author:            Den
 baseurl:           "/wwdc"
 url:               "http://nilotic.github.io"
+theme:             jekyll-theme-clean-blog
 
 # Social Profiles
 twitter_username:  nilotic
@@ -17,3 +18,4 @@ paginate_path:     "/posts/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
+
