@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    WWDC 2017 &amp; Fall - Den&#39;s Blog
+    
+  </title>
+
+  <meta name="description" content="🔍 What’s New in Swiftfileprivate → private 으로 변경fun shakeEm(controls: [UIControl &amp;amp; Shakeable]) 처럼 Subtype existential 가능. ObjC의 NSView&amp;lt;NSTextInputClie...">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/2017/12/07/WWDC2017.html">
+  <link rel="alternate" type="application/rss+xml" title="Den&#39;s Blog" href="/feed.xml">
+
+</head>
+
+
+  <body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Den&#39;s Blog</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/posts/wwdc17.png')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>WWDC 2017 & Fall</h1>
+            
+            <h2 class="subheading">Developer tools</h2>
+            
+            <span class="meta">Posted by
+              <a href="#">Den</a>
+              on December 07, 2017 &middot; <span class="reading-time" title="Estimated read time">
+  
+   16 mins  read </span>
+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p name="3fc1" id="3fc1" class="graf graf--p graf-after--h3"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/wwdc2017/402" data-href="https://developer.apple.com/videos/play/wwdc2017/402" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">What’s New in Swift</strong></a></p><ul class="postList"><li name="4145" id="4145" class="graf graf--li graf-after--p">fileprivate → private 으로 변경</li><li name="fd7e" id="fd7e" class="graf graf--li graf-after--li">fun shakeEm(controls: [UIControl &amp; Shakeable]) 처럼 Subtype existential 가능. ObjC의 NSView&lt;NSTextInputClient&gt; 와 같은 기능.</li><li name="ea29" id="ea29" class="graf graf--li graf-after--li">Smooth 한 version up 을 원하기 때문에 3 → 4로 간다고 문제가 많이 발생하진 않을 것. (Target 별로 Swift version 선택 가능.)</li><li name="9701" id="9701" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Project Settings → Build System → New Build System (Preview) 선택. Precompliled Header가 매번 Indexing 하지 않게 해줄 것.</strong></li><li name="13b3" id="13b3" class="graf graf--li graf-after--li">Coverage Test 할 때도 다시 Build 할 필요 없음. (Build 할 때 알아서 챙겨줌.)</li><li name="b964" id="b964" class="graf graf--li graf-after--li">Unknown Type일 경우 성능 떨어짐. (Heap에 alloc 되기 때문) <br><strong class="markup--strong markup--li-strong">WWDC 2016 Understanding Swift Performance 참고. COW (copy-on-write) reference-counted existential buffers 사용해서 성능 향상 했으나, 근본적으로 Heap alloc 되지 않게 주의해!</strong></li><li name="3c5d" id="3c5d" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">안쓰는 code는 compile 할 때 자동 삭제됨. @objc 도 필요한 곳만 붙음. (이 때문에 error, warning 뜰 수 있음. Compile, RunTime warning 잘 확인해서 해결해)</strong></li><li name="2176" id="2176" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Symbol Size가 줄어서 App Size도 줄었음. Strip Swift Symbols를 Yes로 변경. Archive 할 때도 Option이 있음.</strong></li><li name="b632" id="b632" class="graf graf--li graf-after--li">기존에는 “\u{E9}” 와 “\u{65}\u{301}”이 표기법은 동일해도 완전히 다른 문자로 인식되었으나, 동일한 문자로 되도록 변경. (Length도 1로 동일). 속도도 빨라짐</li><li name="216e" id="216e" class="graf graf--li graf-after--li">Characters.count → .count 로 변경.</li><li name="500e" id="500e" class="graf graf--li graf-after--li">string[i..&lt;string.endIndex] → string[i…] 으로 가능 👍</li><li name="f43e" id="f43e" class="graf graf--li graf-after--li">String을 Collection처럼 사용가능해서 Extension 이용해서 custom filter를 만들 수 있음. 👍</li><li name="e521" id="e521" class="graf graf--li graf-after--li">Performance 때문에<strong class="markup--strong markup--li-strong"> .split(separator: )</strong>가 SubString이라는 Type으로 나옴. subString할 경우, reference count가 +1 되기 때문에 dealloc이 쉽지 않다. 특히 문장이 길다면 더더욱 큰 문제.(나는 한 단어만 필요한데 전체 문장을 계속 Memory에 가지고 있음.)</li><li name="e564" id="e564" class="graf graf--li graf--startsWithDoubleQuote graf-after--li">“”” 을 통해서 multiline text 사용하기 편해짐.👍</li><li name="283c" id="283c" class="graf graf--li graf-after--li">Iterator을 간편하게 extension할 수 있도록 기능 제공.</li><li name="4633" id="4633" class="graf graf--li graf-after--li">RangeExpression 을 통한 subscript 가 정말 좋아 보임. (Calendar 개발 할 때, 이렇게 했음 더 좋았을 듯.)</li><li name="fcc8" id="fcc8" class="graf graf--li graf-after--li">Ownership을 통한 Memory 관리 Tip 설명.</li><li name="32c1" id="32c1" class="graf graf--li graf-after--li">Exclusive Access to Memory → Full Enforcement (Run-time Checks in Debug Builds Only). (메뉴 설정)</li></ul><p name="958e" id="958e" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/wwdc2017/411" data-href="https://developer.apple.com/videos/play/wwdc2017/411" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">What’s New in LLVM</strong></a></p><ul class="postList"><li name="2c8b" id="2c8b" class="graf graf--li graf-after--p">ObjC용 Compiler Warning 강화</li><li name="b9d0" id="b9d0" class="graf graf--li graf-after--li">if (@available(iOS 11, *)) 사용. C, C++ 에서도 사용가능</li><li name="b39e" id="b39e" class="graf graf--li graf-after--li">NSNumber, CFNumberRef, dispatch_once(), copy &amp; NSMutable 관련 Analytics에 기능 추가</li><li name="933d" id="933d" class="graf graf--li graf-after--li">Analyze During ‘Build’ Option</li><li name="e00c" id="e00c" class="graf graf--li graf-after--li">Block Capture of Autoreleasing ( Block에 대한 Parameter 확인 추가 )</li><li name="f441" id="f441" class="graf graf--li graf-after--li">Strict Prototypes (For C++)</li><li name="690c" id="690c" class="graf graf--li graf-after--li">이름 한번에 변경 기능이 C++에서도 가능함.</li><li name="c568" id="c568" class="graf graf--li graf-after--li">그 외 C++ 관련 기능 추가</li></ul><p name="ae4b" id="ae4b" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/wwdc2017/410" data-href="https://developer.apple.com/videos/play/wwdc2017/410" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">Localizaing Contentt for Swift Playgrounds</strong></a></p><ul class="postList"><li name="4635" id="4635" class="graf graf--li graf-after--p">Design 단계부터 Localization 을 고려하라. 나중에 적용하기 힘들다.</li><li name="b01c" id="b01c" class="graf graf--li graf-after--li">Informal, Formal 중에 각 언어별 상황에 맞게 사용하라</li><li name="3319" id="3319" class="graf graf--li graf-after--li">Part 별 Localization 방법 설명 (Live view, Prose, Editable code placeholder, Page title, Glossary term, Hint)</li></ul><p name="20ea" id="20ea" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/wwdc2017/40" data-href="https://developer.apple.com/videos/play/wwdc2017/40" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">Localizaing with Xcode9</strong></a></p><ul class="postList"><li name="400b" id="400b" class="graf graf--li graf-after--p">Strings Management <br>(NSLocalizedString, localizedStringWithFormat, Analyzer 설정 Build Settings → Missing Localizability, Missing Localization Context Comment)</li><li name="9ac2" id="9ac2" class="graf graf--li graf-after--li">Formatters <br>(dateFormat = “YYYY.MM” 사용하지 말고 .full 같은 형식으로 사용하라. 언어에 따라 자동으로 순서 바꿔주기 때문)</li><li name="b305" id="b305" class="graf graf--li graf-after--li">Localization Process<br>- XLIFF 형식으로 Export, Import 가능 <br>- <strong class="markup--strong markup--li-strong">Stringdict 이용한 Plurlas (1 night, 2nights를 하나의 Localized Dict으로 표현 가능. variantFittingPresentationWidth를 이용한 해상도별 문구 변경 기능) </strong>👍</li></ul><p name="72b9" id="72b9" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/wwdc2017/413" data-href="https://developer.apple.com/videos/play/wwdc2017/413" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">App Startup Time: Past, Present, and Future</strong></a></p><ul class="postList"><li name="a27f" id="a27f" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Initializer Calls 를 통한 LunchTime 분석 </strong>👍</li><li name="2d3e" id="2d3e" class="graf graf--li graf-after--li">dyld3.0에서는 Cache를 이용하여 Lunch time을 빠르게 함.</li><li name="61da" id="61da" class="graf graf--li graf-after--li">Swift는 memory 사용량도 적고 NO Initializer 라서 빠름<br>(C++ dynamic link 조심.)</li><li name="8fd6" id="8fd6" class="graf graf--li graf-after--li">그외 C++ 에서 dyld3 사용할 때 문제점 및 해결책 Tips</li></ul><p name="cb78" id="cb78" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">⭐️ </strong><a href="https://developer.apple.com/videos/play/wwdc2017/412" data-href="https://developer.apple.com/videos/play/wwdc2017/412" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">Auto Layout Techniques in InterfaceBuilder</strong></a></p><ul class="postList"><li name="6c06" id="6c06" class="graf graf--li graf-after--p">Changing layout at runtime <br>(constraints Active / DeActive 를 변경하면서 조정)</li><li name="e23d" id="e23d" class="graf graf--li graf-after--li">Tracking touch <br>(View는 Frame, Transform 값으로 그려진다. <strong class="markup--strong markup--li-strong">Transform을 이용한 Demo</strong> 👍👍👍👍👍)</li><li name="8bea" id="8bea" class="graf graf--li graf-after--li">Dynamic type <br>(Storyboard에서 Automatically Adjust Font, <strong class="markup--strong markup--li-strong">Accessibility Inspector 에서 Simulator Font Test 가능, Dynamic font constraint 용이 따로 존재</strong>)</li><li name="da50" id="da50" class="graf graf--li graf-after--li">Safe areas <br>(<strong class="markup--strong markup--li-strong">Storyboard에서 Use Safe Area Layout Guides 사용. Constraints automatically updgrade</strong>)</li><li name="7031" id="7031" class="graf graf--li graf-after--li">Proportional positioning (Spacer View를 통한 Hidden)</li><li name="f355" id="f355" class="graf graf--li graf-after--li">Stack view adaptive layout <br><strong class="markup--strong markup--li-strong">(Hidden property by size class in Xcode9 기능 강추👍. StackView와 조합이 좋음. Demo 참고</strong>)</li></ul><p name="5c2b" id="5c2b" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/wwdc2017/404" data-href="https://developer.apple.com/videos/play/wwdc2017/404" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">Debugging with Xcode 9</strong></a></p><ul class="postList"><li name="0a9d" id="0a9d" class="graf graf--li graf-after--p">Wireless development <br>(Devices → Connect via network, 끊어져도 다시 attach 해서 연결 가능. IP 직업 연결 가능, Apple TV는 선연결 과정없이 바로 연결 가능[비번 쳐서])</li><li name="6776" id="6776" class="graf graf--li graf-after--li">Breakpoint workflow enhancements <br>(break condition에 auto complete 적용 됨. condition 적용된 아이콘은 흰색 삼각형 표시. BreakPoint 창에서 filter 검색 기능 추가됨.)</li><li name="798b" id="798b" class="graf graf--li graf-after--li">View controller debugging <br>(view Debugging에서 ViewController로 나뉘어 보임. 좀 더 보기 편해짐.)</li><li name="3e9b" id="3e9b" class="graf graf--li graf-after--li">SpriteKit debugging (View Debugging 가능해짐)</li><li name="ed40" id="ed40" class="graf graf--li graf-after--li">SceneKit debugging (View Debugging 가능해짐)</li></ul><p name="f94d" id="f94d" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/wwdc2017/407" data-href="https://developer.apple.com/videos/play/wwdc2017/407" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">Understanding Undefined Behavior</strong></a></p><ul class="postList"><li name="8fd0" id="8fd0" class="graf graf--li graf-after--p">What is undefined behavior (Dangling pointer, Buffer overflow, Value lifecycle 에 의해서 발생하는 문제들)</li><li name="1e80" id="1e80" class="graf graf--li graf-after--li">C, C++ Code 작업할 때 Tool 이용해서 확인 (Static Analyzer, Address Sanitizer 이용)</li><li name="f060" id="f060" class="graf graf--li graf-after--li">Swift 사용하면 위와 같은 문제 방지.</li><li name="8aa6" id="8aa6" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">UnWrap 100% 확실한 경우에만 사용. (return type 이 nil이면 nil을 반환한다는 건데 강제로 unwrap 하지 말아라.)</strong></li></ul><p name="d0d1" id="d0d1" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">⭐️ </strong><a href="https://developer.apple.com/videos/play/wwdc2017/406" data-href="https://developer.apple.com/videos/play/wwdc2017/406" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">Finding Bugs Using Xcode Runtime Tools</strong></a></p><ul class="postList"><li name="d2c9" id="d2c9" class="graf graf--li graf-after--p">Main Thread Checker <br><strong class="markup--strong markup--li-strong">(Main Thread에서 실행시켜야 하는데 그러지 않은 것들 확인)</strong> 👍</li><li name="4b67" id="4b67" class="graf graf--li graf-after--li">Address Sanitizer <br>(Detect use of stack after return ON 하면 dangling pointer 알림. Swift 경우에 UnsafePointer를 사용하지 말아라 ) 👍</li><li name="1712" id="1712" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Thread Sanitizer </strong><br><strong class="markup--strong markup--li-strong">(Race on Collection에서 👍, Multi Thread에서 서로 access 할 때, 문제점 알림. 이런 문제는 Access Thread 하나 만들어서 해결하라)</strong></li><li name="d57e" id="d57e" class="graf graf--li graf-after--li">Undefined Behavior Sanitizer (대표 기능 3가지, 그외 많이 있음.)<br>- Integer Overflow (Int * 에서 overflow는 runtimed에서 crash나도 찾기 힘든데 잡아줌<br> <br>- Alignment Violation (int, char 마다 4byte, 8byte block이 있는데 runtime에서 넘어가는 경우가 발생해 crash, 이런 문제를 잡아줌. __attributed__() 사용하거나 malloc 사용하라 )<br> <br>- Nonnull Return Value Violation (ObjC code를 Swift 에서 사용할 때, type은 nonnull이나 실제로 Null 이 return 되는 경우가 있음. 이런 경우를 방지. 개인적으로 Swift로 Porting 할 때 자주 발생함.)</li><li name="2e1f" id="2e1f" class="graf graf--li graf-after--li">Using Runtime Tools Effectively <br>(기본으로 On 해놓고 항상 작업하라. 여러개 On 해놓고 작업하라)</li></ul><p name="3913" id="3913" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/wwdc2017/414" data-href="https://developer.apple.com/videos/play/wwdc2017/414" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">Engineering for Testability</strong></a></p><ul class="postList"><li name="c33c" id="c33c" class="graf graf--li graf-after--p">Testable app code <br>(Testable 하게 code 짜라. Protocol 등등 이용. 그런데 효율적이지 못해보임.)</li><li name="045a" id="045a" class="graf graf--li graf-after--li">Scalable test code <br>(UI Test 할때 short cut 있으면 testCode 만들기 쉬움. func으로 묶으면 UI Flow test 하기 쉬움.)</li></ul><p name="7709" id="7709" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/wwdc2017/405" data-href="https://developer.apple.com/videos/play/wwdc2017/405" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">GitHub and the New Source Control Workflows in Xcode 9</strong></a></p><ul class="postList"><li name="b7ea" id="b7ea" class="graf graf--li graf-after--p">GitHub에서 공식적으로 Xcode 지원 (Ex. Open In Xcode)</li><li name="e443" id="e443" class="graf graf--li graf-after--li">Demo ( Git Flow 전반적인 설명. 하지만 branch 를 시각적으로 확인 할 수 없어서 아쉬움)</li></ul><p name="6013" id="6013" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/wwdc2017/403" data-href="https://developer.apple.com/videos/play/wwdc2017/403" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">What’s New in Signing for Xcode and Xcode Server</strong></a></p><ul class="postList"><li name="63a2" id="63a2" class="graf graf--li graf-after--p">Fundamentals <br>(Xcode server에서 Manual, Auto signing 가능해짐. 따라서 자동 배포 개선)</li><li name="c3d9" id="c3d9" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Development signing with Xcode Server <br>(Manual, Auto Signing 가능, Team signing 가능, two-factor authentication 가능, Command line support 가능, Demo 확인 )</strong></li><li name="e6d6" id="e6d6" class="graf graf--li graf-after--li">Manual signing improvements <br>(provisioning 없으면 편리성을 위해 자동으로 Download popUp, CODE_SIGN_IDENTITY 라는 새로운 option이 생김)</li><li name="e2e7" id="e2e7" class="graf graf--li graf-after--li">Distributing your app <br>(IPA export관련 기능들이 개선, Archive 만들고 Export 하는데 plist를 정보를 가지고 Xcode server에서 Load에서 사용 가능)</li><li name="16fb" id="16fb" class="graf graf--li graf-after--li">Distribution signing with Xcode Server <br>(Manual 관련 창에서 Provisioning 들 선택해서 배포. 자동은 이 과정 생략)</li></ul><p name="1dfa" id="1dfa" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/wwdc2017/416" data-href="https://developer.apple.com/videos/play/wwdc2017/416" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">Teaching with Swift Playground</strong></a></p><ul class="postList"><li name="67cd" id="67cd" class="graf graf--li graf-after--p">2차 방적식, log 등 수학 배울 때 이게 어디에 쓰이는 지 알 수도 없는데 도대체 왜 배우는지 학생들은 모름. 그런데 결국 나중에 Puzzle 풀거나 할 때 사용됨. 논리적인 사고에 도움이 됨.<br>그림 배울 때 빨리 그림을 배우고 싶지 페인트 속성들을 왜 공부하는지 학생들은 모름.<br>음악 배울 때 오선표, 음표를 배우기 보다 빨리 연주하고 싶고 작곡하고 싶은 마음이 더 큼.<br>Algorithm, data structure 중요하나 흥미 유발이 가장 먼저<br><strong class="markup--strong markup--li-strong">결국, 동기 부여가 가장 중요하다. 동기 부여는 어려운 문제를 포기하지 않고 끝가지 풀게 해준다.</strong></li><li name="a55c" id="a55c" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">동기 부여하기 위해서는 복잡한 것 보다 fun 을 추구해야 한다. 복잡한 coding logic 이런거 발고 단순히 게임을 통해 퍼즐 풀도록 하면 도움 됨.</strong></li><li name="3f5e" id="3f5e" class="graf graf--li graf-after--li">Story 만들기 전에 prototype을 만들고 feedBack 받아라 (연습장에 연습해 봐라.)</li><li name="0c8b" id="0c8b" class="graf graf--li graf-after--li">Play ground 만들 때 beginner. 와 advanced 용 따로 구분하라</li><li name="a387" id="a387" class="graf graf--li graf-after--li">초보자는 용어를 잘 모르니 설명해 줘라.</li></ul><p name="ee4b" id="ee4b" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/wwdc2017/408" data-href="https://developer.apple.com/videos/play/wwdc2017/408" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">What’s New in Swift Playgrounds</strong></a></p><ul class="postList"><li name="659a" id="659a" class="graf graf--li graf-after--p">Manifest Files (chapter, level 등 metadata 저장 가능)</li><li name="b2b3" id="b2b3" class="graf graf--li graf-after--li">iOS 11 SDK 가능 (ARKit., CorrML, IOSurface, PDFKit, Vision)</li><li name="3335" id="3335" class="graf graf--li graf-after--li">Copying Code Between Page <br>(plist 에 정보 추가 필요. 사용자가 Code copy 가능)</li><li name="7c15" id="7c15" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Controlling Speed in Playgrounds <br>(Debug 개념을 비디오 재생 하듯이 쉽게 풀어낸 듯, 천천히, 빨리 감기 가능)</strong></li><li name="42ba" id="42ba" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Async 사용할 때 주의 (예제 참고)</strong></li><li name="0aac" id="0aac" class="graf graf--li graf-after--li">plist 통해서 Execution Speed 조절 가능.</li><li name="bc7b" id="bc7b" class="graf graf--li graf-after--li">Minium target 설정 가능(Swift, iOS version)</li><li name="46be" id="46be" class="graf graf--li graf-after--li">Resource folder (Public, Private 가능)</li><li name="ae2e" id="ae2e" class="graf graf--li graf-after--li">fatalError 가능</li><li name="4eb2" id="4eb2" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">사용자가 Code 수정 가능 (추가, 삭제, 순서 변경 ) 👍 실제 MarkUp code는 앞 뒤로 Tag를 달아 구분.</strong></li><li name="7990" id="7990" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Localization <br>(ManifestPlist.strings , Prose.string, EditableFields.strings, QuickHelp.strings. 여러 형태 지원)</strong></li><li name="0833" id="0833" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Bluetooth 가능 <br>(PlaygroundBluetoothCentralManagerDelegate 를 통해서 구현)</strong></li></ul><p name="cff1" id="cff1" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/wwdc2017/409" data-href="https://developer.apple.com/videos/play/wwdc2017/409" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">What’s New in Testing</strong></a></p><ul class="postList"><li name="66fd" id="66fd" class="graf graf--li graf-after--p">Enhancements <br>(statusItem, waitForExistentce(), Test scheme → Localization 설정, Perference → Xcode Server )</li><li name="7739" id="7739" class="graf graf--li graf-after--li">Async testing <br>(Opening documents, Work on background threads, Communicating with services and extensions, Network activity, Animations, UI test conditions)<br>- <strong class="markup--strong markup--li-strong">waitForExpectations(timeout: 10)</strong><br>- wait(for: ,<a href="https://dailyhotel.atlassian.net/wiki/pages/createpage.action?spaceKey=IOS&amp;title=documentExpectation&amp;linkCreation=true&amp;fromPageId=76679877" data-href="https://dailyhotel.atlassian.net/wiki/pages/createpage.action?spaceKey=IOS&amp;title=documentExpectation&amp;linkCreation=true&amp;fromPageId=76679877" class="markup--anchor markup--li-anchor" rel="noopener" target="_blank">documentExpectation</a> timeout: 10)]<br>- XCTWaiter(delegate: self).wait(for: [documentExpectation], timeout: 10)</li><li name="90f7" id="90f7" class="graf graf--li graf-after--li">Multi-app testing <br>(Launch, Terminate, Queries, AppGroup 사용하는 경우 동시 test 가능)</li><li name="baa3" id="baa3" class="graf graf--li graf-after--li">UI Testing performance <br>(Remote queries, Query analysis, Eliminate Snapshots )</li><li name="30f4" id="30f4" class="graf graf--li graf-after--li">Activities, attachments. and screenshots <br>(Test 단위를 block으로 감싸 관리하기 쉬움, Screen shot 기능 추가)</li></ul><p name="86d6" id="86d6" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/fall2017/603" data-href="https://developer.apple.com/videos/play/fall2017/603" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">Metal2 on A11 — Imageblocks</strong></a></p><ul class="postList"><li name="1f77" id="1f77" class="graf graf--li graf-after--p">Texture → Imageblock으로 옮길 때, pixel 하나하나 옮겼는데 지금은 통으로 옮김. (훨씬 빨라짐)</li><li name="fe4b" id="fe4b" class="graf graf--li graf-after--li">Implicit Imageblocks <br>- A7-A10 (64bps) → 32 bps (size 감소)</li><li name="e772" id="e772" class="graf graf--li graf-after--li">Fragment, FragmentLayes, FragmentOut, 설명 (Sample code 참고)</li><li name="ef7b" id="ef7b" class="graf graf--li graf-after--li">New Packed Data Types (Spec 자료 참고)</li></ul><p name="1d98" id="1d98" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/fall2017/606" data-href="https://developer.apple.com/videos/play/fall2017/606" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">Metal 2 on A11 — Imageblock Sample Converage Control</strong></a></p><figure name="0e0e" id="0e0e" class="graf graf--figure graf-after--p"
+<img class="graf-image" data-image-id="1*14uvcTOBDLaNss4JD9P45g.png" data-width="945" data-height="432" src="https://cdn-images-1.medium.com/max/800/1*14uvcTOBDLaNss4JD9P45g.png"><figcaption class="imageCaption">Multisamplling Antialiasing</figcaption></figure><ul class="postList"><li name="115b" id="115b" class="graf graf--li graf-after--figure">Enhanced MSAA on A11 (좀 더 상세히 pixel control 가능)</li><li name="b137" id="b137" class="graf graf--li graf-after--li">Color Tracking Example (Blend, Opaque 일 때 blend 처리 과정 설명)</li><li name="61fb" id="61fb" class="graf graf--li graf-after--li">Sample Code — Surface Aggregation (Sample 참고)</li></ul><p name="8d2d" id="8d2d" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">🔍 </strong><a href="https://developer.apple.com/videos/play/fall2017/604" data-href="https://developer.apple.com/videos/play/fall2017/604" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--p-strong">Metal2 on A11 — Tile Shading</strong></a></p><ul class="postList"><li name="d3e4" id="d3e4" class="graf graf--li graf-after--p">기존 (매번 사용할 때 마다 memory 로 옮김)<br>- Device Memory → Tile Memory</li><li name="998a" id="998a" class="graf graf--li graf-after--li">Metal 2 (Render Phase 끝날 때 까지, Tile Memory 에 가져다 놓고 계속 사용)<br>- Device Memory → Tile Memory</li><li name="6f01" id="6f01" class="graf graf--li graf-after--li">Thread Organization (pixel 그릴 부분을 Thread로 묶어서 dispatch)</li></ul><figure name="380c" id="380c" class="graf graf--figure graf-after--li">
+<img class="graf-image" data-image-id="1*kfV6EgjmURn11bps3rpy6w.png" data-width="440" data-height="245" src="https://cdn-images-1.medium.com/max/800/1*kfV6EgjmURn11bps3rpy6w.png"><figcaption class="imageCaption">Render Pass Setup</figcaption></figure><ul class="postList"><li name="93b7" id="93b7" class="graf graf--li graf-after--figure">Pipeline Setup (Kernel / Fragment Function → Tile Render Pipeline Descriptor → Render Pipeline State)</li><li name="d7d3" id="d7d3" class="graf graf--li graf-after--li graf--trailing">Sample 참고</li></ul></div></div></section>
+</section>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/2017/12/07/WWDC2017.html"
+            data-toggle="tooltip" data-placement="top" title="WWDC 2017 & Fall">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/2017/12/09/WWDC2017.html"
+            data-toggle="tooltip" data-placement="top" title="WWDC 2017 & Fall">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="https://www.twitter.com/nilotic2">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/nilotic2">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/nilotic">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Den 2019</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  </body>
+
+</html>

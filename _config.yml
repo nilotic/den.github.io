@@ -1,18 +1,18 @@
 title:             Den's Blog
 email:             nilotic2@gmail.com
-description:       Summaried WWDC sessions
+description:       WWDC sessions
 author:            Den
 #baseurl:           "/wwdc"
 url:               "https://nilotic.github.io"
 
 # Social Profiles
-twitter_username:  nilotic
+twitter_username:  nilotic2
 github_username:   nilotic
-facebook_username: nilotic
+facebook_username: nilotic2
 
 # Build settings
 markdown:          kramdown
-paginate:          5
+paginate:          50
 paginate_path:     "/posts/page:num/"
 plugins:
   - jekyll-feed
