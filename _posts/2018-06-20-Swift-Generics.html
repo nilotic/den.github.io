@@ -1,0 +1,79 @@
+
+---
+layout: post
+title:  "Swift Generics"
+date:   2018-06-07 23:45:13 -0000
+background: '/img/posts/wwdc18.png'
+---
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Swift Generics</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+WWDC 2018
+</section>
+<section data-field="body" class="e-content">
+<section name="043c" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="592c" id="592c" class="graf graf--h3 graf--leading graf--title">Swift Generics</h3><h4 name="a448" id="a448" class="graf graf--h4 graf-after--h3 graf--subtitle"><a href="https://developer.apple.com/videos/play/wwdc2018/406/" data-href="https://developer.apple.com/videos/play/wwdc2018/406/" class="markup--anchor markup--h4-anchor" rel="noopener" target="_blank">WWDC 2018</a></h4><h3 name="f543" id="f543" class="graf graf--h3 graf-after--h4">Generics</h3><figure name="db21" id="db21" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 475px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 67.9%;"></div><img class="img-fluid" data-image-id="1*nSlE7LiTUwC6qkdcIqwBRA.png" data-width="3078" data-height="2090" src="https://cdn-images-1.medium.com/max/800/1*nSlE7LiTUwC6qkdcIqwBRA.png"></div><figcaption class="imageCaption">Type safety, Memory</figcaption></figure><figure name="61b3" id="61b3" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 367px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 52.400000000000006%;"></div><img class="img-fluid" data-image-id="1*0-jXA6yIeovXfAv6NW7zQg.png" data-width="2912" data-height="1526" src="https://cdn-images-1.medium.com/max/800/1*0-jXA6yIeovXfAv6NW7zQg.png"></div><figcaption class="imageCaption">Wrap Common Algorithms in Methods</figcaption></figure><h3 name="9626" id="9626" class="graf graf--h3 graf-after--figure">Designing a Protocol</h3><figure name="8973" id="8973" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 184px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 26.200000000000003%;"></div><img class="img-fluid" data-image-id="1*1zkFViVhbSUWlMwiU150Pw.png" data-width="3050" data-height="800" src="https://cdn-images-1.medium.com/max/800/1*1zkFViVhbSUWlMwiU150Pw.png"></div><figcaption class="imageCaption">Setting the Element Type</figcaption></figure><figure name="5c24" id="5c24" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 319px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 45.6%;"></div><img class="img-fluid" data-image-id="1*sFoMKcBRsTnd7QdQbepopg.png" data-width="800" data-height="365" src="https://cdn-images-1.medium.com/max/800/1*sFoMKcBRsTnd7QdQbepopg.png"></div><figcaption class="imageCaption">Constraining Index</figcaption></figure><h3 name="b9b8" id="b9b8" class="graf graf--h3 graf-after--figure">Customization Points</h3><figure name="d15c" id="d15c" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 358px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 51.1%;"></div><img class="img-fluid" data-image-id="1*MtWfSbjnEQkUs_xemvmlrw.png" data-width="2138" data-height="1092" src="https://cdn-images-1.medium.com/max/800/1*MtWfSbjnEQkUs_xemvmlrw.png"></div><figcaption class="imageCaption">Using Count in a Generic Context</figcaption></figure><figure name="16fa" id="16fa" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 354px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 50.5%;"></div><img class="img-fluid" data-image-id="1*JTg_up4oAT4N2_HprCJQJA.png" data-width="1600" data-height="808" src="https://cdn-images-1.medium.com/max/800/1*JTg_up4oAT4N2_HprCJQJA.png"></div><figcaption class="imageCaption">Choosing When to Define Customization Points</figcaption></figure><h3 name="0731" id="0731" class="graf graf--h3 graf-after--figure">Protocol Inheritance</h3><figure name="65b6" id="65b6" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 454px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 64.9%;"></div><img class="img-fluid" data-image-id="1*U_vZv2oncoaj7a2ZWk7sIg.png" data-width="2166" data-height="1406" src="https://cdn-images-1.medium.com/max/800/1*U_vZv2oncoaj7a2ZWk7sIg.png"></div><figcaption class="imageCaption">BidirectionalCollection</figcaption></figure><figure name="af44" id="af44" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 629px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 89.9%;"></div><img class="img-fluid" data-image-id="1*lWhAHaeM-bqKhmWrvz6low.png" data-width="1838" data-height="1652" src="https://cdn-images-1.medium.com/max/800/1*lWhAHaeM-bqKhmWrvz6low.png"></div><figcaption class="imageCaption">Fisher-Yates Shuffle</figcaption></figure><h3 name="2b16" id="2b16" class="graf graf--h3 graf-after--figure">Collection Protocol Hierarchy</h3><figure name="09e6" id="09e6" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 272px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 38.800000000000004%;"></div><img class="img-fluid" data-image-id="1*4jRR8KT1eKXDzm4qa1ibXA.png" data-width="1928" data-height="748" src="https://cdn-images-1.medium.com/max/800/1*4jRR8KT1eKXDzm4qa1ibXA.png"></div><figcaption class="imageCaption">Collection Protocol Hierarchy</figcaption></figure><h3 name="ea75" id="ea75" class="graf graf--h3 graf-after--figure">Conditional Conformance</h3><figure name="34d7" id="34d7" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 550px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 78.60000000000001%;"></div><img class="img-fluid" data-image-id="1*TvHtpmvz5dJ2j5c_w_6ldg.png" data-width="1890" data-height="1486" src="https://cdn-images-1.medium.com/max/800/1*TvHtpmvz5dJ2j5c_w_6ldg.png"></div><figcaption class="imageCaption">Slicing Collections</figcaption></figure><h3 name="0a04" id="0a04" class="graf graf--h3 graf-after--figure">Range</h3><figure name="8ebb" id="8ebb" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 310px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 44.3%;"></div><img class="img-fluid" data-image-id="1*-1l7oC3Ase6oz3pq644X6w.png" data-width="2206" data-height="978" src="https://cdn-images-1.medium.com/max/800/1*-1l7oC3Ase6oz3pq644X6w.png"></div><figcaption class="imageCaption">Range Structures</figcaption></figure><h3 name="aca9" id="aca9" class="graf graf--h3 graf-after--figure">Range as a Collection</h3><figure name="f329" id="f329" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 84px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 11.899999999999999%;"></div><img class="img-fluid" data-image-id="1*Zs-9AFRGBhpGbnhFzyVTaw.png" data-width="2212" data-height="264" src="https://cdn-images-1.medium.com/max/800/1*Zs-9AFRGBhpGbnhFzyVTaw.png"></div><figcaption class="imageCaption">Range conditionally conforms to RandomAccessCollection</figcaption></figure><figure name="c796" id="c796" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 42px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 6%;"></div><img class="img-fluid" data-image-id="1*1POqe8R71IJhvEPjXEQjgA.png" data-width="2202" data-height="132" src="https://cdn-images-1.medium.com/max/800/1*1POqe8R71IJhvEPjXEQjgA.png"></div><figcaption class="imageCaption">CountableRange is a convenient alias for Ranges that are Collections</figcaption></figure><h3 name="f609" id="f609" class="graf graf--h3 graf-after--figure">Protocol Conformances and Classes</h3><figure name="11d6" id="11d6" class="graf graf--figure graf-after--h3 graf--trailing"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 263px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 37.6%;"></div><img class="img-fluid" data-image-id="1*otOmEBaht-Z0hLpFcxqpNA.png" data-width="2032" data-height="764" src="https://cdn-images-1.medium.com/max/800/1*otOmEBaht-Z0hLpFcxqpNA.png"></div><figcaption class="imageCaption">Required initializers must be implemented by all subclasses</figcaption></figure></div></div></section>
+</section>
