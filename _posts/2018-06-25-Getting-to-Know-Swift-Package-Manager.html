@@ -1,0 +1,84 @@
+
+---
+layout: post
+title:  "Getting to Know Swift Package Manager"
+subtitle: "WWDC 2018"
+date:   2018-06-25 23:45:13 -0000
+background: '/img/posts/wwdc18.png'
+---
+
+
+
+
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Getting to Know Swift Package Manager</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Getting to Know Swift Package Manager</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+WWDC 2018
+</section>
+<section data-field="body" class="e-content">
+<section name="6b4c" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="875e" id="875e" class="graf graf--h3 graf--leading graf--title">Getting to Know Swift Package Manager</h3><h4 name="95ef" id="95ef" class="graf graf--h4 graf-after--h3 graf--subtitle"><a href="https://developer.apple.com/videos/play/wwdc2018/411/" data-href="https://developer.apple.com/videos/play/wwdc2018/411/" class="markup--anchor markup--h4-anchor" rel="noopener" target="_blank">WWDC 2018</a></h4><h3 name="74a1" id="74a1" class="graf graf--h3 graf-after--h4">SwiftPM Commands</h3><figure name="4489" id="4489" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 440px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 62.9%;"></div><img class="graf-image" data-image-id="1*TdjvVlXqdb1JoBtlZ0IZ9g.png" data-width="1834" data-height="1154" src="https://cdn-images-1.medium.com/max/800/1*TdjvVlXqdb1JoBtlZ0IZ9g.png"></div></figure><h3 name="bfb3" id="bfb3" class="graf graf--h3 graf-after--figure">Anatomy of a Package</h3><figure name="95d5" id="95d5" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 556px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 79.4%;"></div><img class="graf-image" data-image-id="1*4dudmqr6UOQewCsfaQLq-A.png" data-width="1622" data-height="1288" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*4dudmqr6UOQewCsfaQLq-A.png"></div></figure><h3 name="ee15" id="ee15" class="graf graf--h3 graf-after--figure">Dependencies</h3><figure name="b1ac" id="b1ac" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 637px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 90.9%;"></div><img class="graf-image" data-image-id="1*t0hlbdkdIwPLGuXkQSOJ8A.png" data-width="2496" data-height="2270" src="https://cdn-images-1.medium.com/max/800/1*t0hlbdkdIwPLGuXkQSOJ8A.png"></div></figure><h3 name="da4e" id="da4e" class="graf graf--h3 graf-after--figure">Targets</h3><figure name="71bb" id="71bb" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 766px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 109.4%;"></div><img class="graf-image" data-image-id="1*EWWywRkA25ES4CPPSOGxcQ.png" data-width="1484" data-height="1624" src="https://cdn-images-1.medium.com/max/800/1*EWWywRkA25ES4CPPSOGxcQ.png"></div></figure><h3 name="2aec" id="2aec" class="graf graf--h3 graf-after--figure">Products</h3><figure name="5479" id="5479" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 587px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 83.89999999999999%;"></div><img class="graf-image" data-image-id="1*3uAF-DJJZKJEgVjXvzwx5w.png" data-width="1686" data-height="1414" src="https://cdn-images-1.medium.com/max/800/1*3uAF-DJJZKJEgVjXvzwx5w.png"></div></figure><h3 name="79e9" id="79e9" class="graf graf--h3 graf-after--figure">The Design of SwiftPM</h3><figure name="ed65" id="ed65" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 466px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 66.60000000000001%;"></div><img class="graf-image" data-image-id="1*CHbQx84iNukPd3rLVbn6Wg.png" data-width="1646" data-height="1096" src="https://cdn-images-1.medium.com/max/800/1*CHbQx84iNukPd3rLVbn6Wg.png"></div></figure><h3 name="3264" id="3264" class="graf graf--h3 graf-after--figure">Prefer Declarative Syntax</h3><figure name="a1be" id="a1be" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 278px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 39.800000000000004%;"></div><img class="graf-image" data-image-id="1*nmZtnEbKIW_QSLLQYiq9Ig.png" data-width="2208" data-height="878" src="https://cdn-images-1.medium.com/max/800/1*nmZtnEbKIW_QSLLQYiq9Ig.png"></div></figure><h3 name="2e82" id="2e82" class="graf graf--h3 graf-after--figure">Support for Building Other Languages</h3><figure name="624b" id="624b" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 366px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 52.300000000000004%;"></div><img class="graf-image" data-image-id="1*2T-yPPhxuGpaSogzUR8BjA.png" data-width="1578" data-height="826" src="https://cdn-images-1.medium.com/max/800/1*2T-yPPhxuGpaSogzUR8BjA.png"></div></figure><h3 name="00e4" id="00e4" class="graf graf--h3 graf-after--figure">Semantic Versioning</h3><figure name="0e52" id="0e52" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 344px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 49.1%;"></div><img class="graf-image" data-image-id="1*lXh5igTb2zSUpbzvj35puw.png" data-width="1140" data-height="560" src="https://cdn-images-1.medium.com/max/800/1*lXh5igTb2zSUpbzvj35puw.png"></div></figure><h3 name="0b3d" id="0b3d" class="graf graf--h3 graf-after--figure">llbuild</h3><ul class="postList"><li name="3ef6" id="3ef6" class="graf graf--li graf-after--h3">SwiftPM’s build execution engine</li><li name="925b" id="925b" class="graf graf--li graf-after--li">Open source Project</li></ul><h3 name="4130" id="4130" class="graf graf--h3 graf-after--li">Testing</h3><ul class="postList"><li name="b1a7" id="b1a7" class="graf graf--li graf-after--h3">Parallel Testing</li><li name="2d8d" id="2d8d" class="graf graf--li graf-after--li">Test Filtering</li></ul><h3 name="36e9" id="36e9" class="graf graf--h3 graf-after--li">Edit Mode</h3><p name="a6e3" id="a6e3" class="graf graf--p graf-after--h3">Change to transitive dependencies can be tested <br>without having to forward all packages in the graph upfront</p><figure name="efd9" id="efd9" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 559px; max-height: 366px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 65.5%;"></div><img class="graf-image" data-image-id="1*sjMY2fkKwY7XTLaPwDPHsw.gif" data-width="559" data-height="366" src="https://cdn-images-1.medium.com/max/800/1*sjMY2fkKwY7XTLaPwDPHsw.gif"></div></figure><h3 name="ebf1" id="ebf1" class="graf graf--h3 graf-after--figure">Branch Dependencies</h3><p name="cf58" id="cf58" class="graf graf--p graf-after--h3">Allow depending on packages without strict versioning requirements.</p><figure name="89f7" id="89f7" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 303px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 43.3%;"></div><img class="graf-image" data-image-id="1*A6YrTEfosr2ntlLAByRMqA.png" data-width="1734" data-height="750" src="https://cdn-images-1.medium.com/max/800/1*A6YrTEfosr2ntlLAByRMqA.png"></div></figure><h3 name="38eb" id="38eb" class="graf graf--h3 graf-after--figure">Local Packages Dependencies</h3><p name="deda" id="deda" class="graf graf--p graf-after--h3">Allow to packages directly from the file system, instead of from a git.</p><h3 name="6464" id="6464" class="graf graf--h3 graf-after--p">Swift Language Version</h3><figure name="b9e7" id="b9e7" class="graf graf--figure graf-after--h3 graf--trailing"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 111px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 15.8%;"></div><img class="graf-image" data-image-id="1*0TuSVfqOoMkFA-ylsh5lIQ.png" data-width="2204" data-height="348" src="https://cdn-images-1.medium.com/max/800/1*0TuSVfqOoMkFA-ylsh5lIQ.png"></div></figure></div></div></section>
+</section>
