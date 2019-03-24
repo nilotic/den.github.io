@@ -1,0 +1,82 @@
+---
+layout: post
+title:  "Accessible Drag and Drop"
+subtitle: "WWDC 2018"
+date:   2018-09-12 20:23:33 -0000
+background: '/img/posts/wwdc18.png'
+---
+
+
+
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Accessible Drag and Drop</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Accessible Drag and Drop</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+WWDC 2018
+</section>
+<section data-field="body" class="e-content">
+<section name="518c" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="d181" id="d181" class="graf graf--h3 graf--leading graf--title">Accessible Drag and Drop</h3><h4 name="58d7" id="58d7" class="graf graf--h4 graf-after--h3 graf--subtitle"><a href="https://developer.apple.com/videos/play/wwdc2018/241/" data-href="https://developer.apple.com/videos/play/wwdc2018/241/" class="markup--anchor markup--h4-anchor" rel="noopener" target="_blank">WWDC 2018</a></h4><h3 name="457e" id="457e" class="graf graf--h3 graf-after--h4">Drag and Drop Refresher</h3><ul class="postList"><li name="43ab" id="43ab" class="graf graf--li graf-after--h3">Interactions are hosted by views</li><li name="d8b0" id="d8b0" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Starting</em></strong> a drag: <code class="markup--code markup--li-code"><strong class="markup--strong markup--li-strong">UIDragInteration</strong></code></li><li name="3e84" id="3e84" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Accepting</em></strong> a drop: <code class="markup--code markup--li-code"><strong class="markup--strong markup--li-strong">UIDropInteraction</strong></code></li></ul><h3 name="3f38" id="3f38" class="graf graf--h3 graf-after--li">Accessible Drag and Drop Concepts</h3><ul class="postList"><li name="8fd8" id="8fd8" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">Your accessibility element might not host interactions directly</strong><br>- Subviews might host interactions<br>- Element might descend from a view that hosts interactions</li><li name="666b" id="666b" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Solution</strong><br>- Specify logical drags and drops to Accessibility</li></ul><h3 name="a82f" id="a82f" class="graf graf--h3 graf-after--li">UIAccessibilityDragging</h3><ul class="postList"><li name="6b18" id="6b18" class="graf graf--li graf-after--h3">Logical<strong class="markup--strong markup--li-strong"> drag sources</strong> and <strong class="markup--strong markup--li-strong">drop points<br>- <em class="markup--em markup--li-em">Drag sources</em></strong> describe where to start drags<br>- <strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Drop points</em></strong> describe where to drop</li><li name="9f3e" id="9f3e" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Users activate drags and drops like custom actions</em></strong></li><li name="a1d2" id="a1d2" class="graf graf--li graf-after--li">Drags and drops often exposed automatically<br>- Assigned default name<br>- Only interactions in an element’s subtree are exposed</li><li name="8e13" id="8e13" class="graf graf--li graf-after--li">Allows exposing exactly the interactions that make sense</li><li name="a3a0" id="a3a0" class="graf graf--li graf-after--li">Allows specifying a specific name for each</li><li name="8482" id="8482" class="graf graf--li graf-after--li">Implement for the best experience</li></ul><figure name="a202" id="a202" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 162px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 23.1%;"></div><img class="graf-image" data-image-id="1*gQl9cMmaPC_6HUXGkBYaxA.png" data-width="4306" data-height="996" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*gQl9cMmaPC_6HUXGkBYaxA.png"></div></figure><h3 name="ceb4" id="ceb4" class="graf graf--h3 graf-after--figure">Exposing an Ancestor’s Drag</h3><p name="3b79" id="3b79" class="graf graf--p graf-after--h3"><strong class="markup--strong markup--p-strong">Example</strong></p><ul class="postList"><li name="fa47" id="fa47" class="graf graf--li graf-after--p">Bar graph built with <code class="markup--code markup--li-code">CALayer</code></li><li name="e9b1" id="e9b1" class="graf graf--li graf-after--li">Drag and drop bar data by dragging the bar itself</li></ul><figure name="df70" id="df70" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 275px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 39.300000000000004%;"></div><img class="graf-image" data-image-id="1*QfE1HX188sG0gQtZPlk0sw.png" data-width="1994" data-height="783" src="https://cdn-images-1.medium.com/max/800/1*QfE1HX188sG0gQtZPlk0sw.png"></div></figure><figure name="1977" id="1977" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 393px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.2%;"></div><img class="graf-image" data-image-id="1*gyRDZ147WCb8x_UFwfF4pw.png" data-width="4618" data-height="2594" src="https://cdn-images-1.medium.com/max/800/1*gyRDZ147WCb8x_UFwfF4pw.png"></div></figure><h3 name="b2d4" id="b2d4" class="graf graf--h3 graf-after--figure">UIAccessibilityLocationDescriptor</h3><ul class="postList"><li name="b820" id="b820" class="graf graf--li graf-after--h3">Names and describes where to activate an interaction<br>- A point<br>- In a view<br>- With a name</li></ul><figure name="6e6a" id="6e6a" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 210px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 30%;"></div><img class="graf-image" data-image-id="1*NXfeN1iaRo_Y65HDexWJfg.png" data-width="3362" data-height="1008" src="https://cdn-images-1.medium.com/max/800/1*NXfeN1iaRo_Y65HDexWJfg.png"></div></figure><h3 name="d270" id="d270" class="graf graf--h3 graf-after--figure">accessibilityDragSourceDescriptors</h3><ul class="postList"><li name="ddb4" id="ddb4" class="graf graf--li graf-after--h3">Expose <strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">drag sources</em></strong> logically associated with the element</li></ul><figure name="2fa1" id="2fa1" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 71px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 10.2%;"></div><img class="graf-image" data-image-id="1*gyC43PN9MR-wiQXAsnJ9-w.png" data-width="3916" data-height="398" src="https://cdn-images-1.medium.com/max/800/1*gyC43PN9MR-wiQXAsnJ9-w.png"></div></figure><figure name="c20f" id="c20f" class="graf graf--figure graf-after--figure graf--trailing"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 278px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 39.7%;"></div><img class="graf-image" data-image-id="1*f36SAbK0xNdQCS4YqrcL5w.png" data-width="4504" data-height="1786" src="https://cdn-images-1.medium.com/max/800/1*f36SAbK0xNdQCS4YqrcL5w.png"></div></figure></div></div></section><section name="4a3d" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="800b" id="800b" class="graf graf--h3 graf--leading">accessibilityDropPointDescriptors</h3><ul class="postList"><li name="c1a1" id="c1a1" class="graf graf--li graf-after--h3">Expose <strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">drop points</em></strong> logically associated with this element</li></ul><p name="8d23" id="8d23" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">⚠️ Descriptors <em class="markup--em markup--p-em">must reference</em> the views with the <em class="markup--em markup--p-em">relevant interaction</em> ⚠️</strong></p><h3 name="b79e" id="b79e" class="graf graf--h3 graf-after--p">Exposing Multiple Drops</h3><p name="9d0f" id="9d0f" class="graf graf--p graf-after--h3"><strong class="markup--strong markup--p-strong">Example</strong></p><ul class="postList"><li name="d8ff" id="d8ff" class="graf graf--li graf-after--p">Contact card<br>- Card is one element<br>- Drop into multiple “well” in the card</li></ul><figure name="e3ad" id="e3ad" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 375px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 53.6%;"></div><img class="graf-image" data-image-id="1*iMNvrU1ZB44PxoLhmWF5Yg.png" data-width="1810" data-height="970" src="https://cdn-images-1.medium.com/max/800/1*iMNvrU1ZB44PxoLhmWF5Yg.png"></div></figure><figure name="0580" id="0580" class="graf graf--figure graf-after--figure graf--trailing"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 332px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 47.4%;"></div><img class="graf-image" data-image-id="1*WNesd2BKki71qpZEMrt4jQ.png" data-width="4252" data-height="2014" src="https://cdn-images-1.medium.com/max/800/1*WNesd2BKki71qpZEMrt4jQ.png"></div></figure></div></div></section>
+</section>

@@ -1,0 +1,82 @@
+---
+layout: post
+title:  "Metal 2 on A11 — Raster Order Groups"
+subtitle: "WWDC 2018"
+date:   2018-10-02 00:15:52 -0000
+background: '/img/posts/wwdc18.png'
+---
+
+
+
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Metal 2 on A11 — Raster Order Groups</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Metal 2 on A11 — Raster Order Groups</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Tech Talks
+</section>
+<section data-field="body" class="e-content">
+<section name="76f7" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="8684" id="8684" class="graf graf--h3 graf--leading graf--title">Metal 2 on A11 — Raster Order Groups</h3><h4 name="8c2c" id="8c2c" class="graf graf--h4 graf-after--h3 graf--subtitle"><a href="https://developer.apple.com/videos/play/tech-talks/605/" data-href="https://developer.apple.com/videos/play/tech-talks/605/" class="markup--anchor markup--h4-anchor" rel="noopener" target="_blank">Tech Talks</a></h4><h3 name="2269" id="2269" class="graf graf--h3 graf-after--h4">Introduction</h3><ul class="postList"><li name="8d70" id="8d70" class="graf graf--li graf-after--h3">Access memory from overlapping fragment functions — in submission order</li><li name="b2a2" id="b2a2" class="graf graf--li graf-after--li">Allows fragment functions to communicate</li><li name="b16d" id="b16d" class="graf graf--li graf-after--li">Allows fragment functions to build more interesting data structures</li></ul><h3 name="db49" id="db49" class="graf graf--h3 graf-after--li">Fragment Shaders with Blending</h3><figure name="a761" id="a761" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 476px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 68%;"></div><img class="graf-image" data-image-id="1*2I3DnzIMMghTsCENB6Ja-w.png" data-width="2409" data-height="1638" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*2I3DnzIMMghTsCENB6Ja-w.png"></div><figcaption class="imageCaption">😡</figcaption></figure><h3 name="fda8" id="fda8" class="graf graf--h3 graf-after--figure">Mid-Shader Memory Access</h3><figure name="8e61" id="8e61" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 424px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 60.5%;"></div><img class="graf-image" data-image-id="1*RMWnlJ_xGunclH_SGD8EaA.png" data-width="2638" data-height="1597" src="https://cdn-images-1.medium.com/max/800/1*RMWnlJ_xGunclH_SGD8EaA.png"></div><figcaption class="imageCaption">😆</figcaption></figure><h3 name="7d60" id="7d60" class="graf graf--h3 graf-after--figure">With Raster Order Groups</h3><figure name="199c" id="199c" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 391px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 55.900000000000006%;"></div><img class="graf-image" data-image-id="1*evoO7EuI-jdR3sOujHXZUQ.png" data-width="3073" data-height="1718" src="https://cdn-images-1.medium.com/max/800/1*evoO7EuI-jdR3sOujHXZUQ.png"></div></figure><h3 name="252b" id="252b" class="graf graf--h3 graf-after--figure">Raster Order Groups on A11</h3><ul class="postList"><li name="386a" id="386a" class="graf graf--li graf-after--h3">Supports tile shading and tile memory</li><li name="9a04" id="9a04" class="graf graf--li graf-after--li">Supports multiple groups<br>- Eliminates cases of excessive synchronization<br>- Enable reader / write lock-style behavior</li></ul><h3 name="c323" id="c323" class="graf graf--h3 graf-after--li">Example: Deferred Shading</h3><figure name="8a0a" id="8a0a" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 245px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 35%;"></div><img class="graf-image" data-image-id="1*K37j008Q2YF7JfVUKJFTjw.png" data-width="3366" data-height="1177" src="https://cdn-images-1.medium.com/max/800/1*K37j008Q2YF7JfVUKJFTjw.png"></div></figure><figure name="c778" id="c778" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 177px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 25.3%;"></div><img class="graf-image" data-image-id="1*0XWutxqt6iJzLHzouGEt9Q.gif" data-width="720" data-height="182" src="https://cdn-images-1.medium.com/max/800/1*0XWutxqt6iJzLHzouGEt9Q.gif"></div></figure><figure name="9b98" id="9b98" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 282px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 40.300000000000004%;"></div><img class="graf-image" data-image-id="1*rCqmWTa9qkIeFq36LD7oLg.png" data-width="3064" data-height="1236" src="https://cdn-images-1.medium.com/max/800/1*rCqmWTa9qkIeFq36LD7oLg.png"></div></figure><h3 name="ac94" id="ac94" class="graf graf--h3 graf-after--figure">Example: Adding Transparency</h3><p name="686a" id="686a" class="graf graf--p graf-after--h3">Add a new phase into the render pass<br>1. Fill and shade G-buffer<br>2. Order independent transparency for forward surfaces</p><figure name="b1cf" id="b1cf" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 180px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 25.7%;"></div><img class="graf-image" data-image-id="1*smlqiHawrQXC1O5hYrURMw.png" data-width="2595" data-height="667" src="https://cdn-images-1.medium.com/max/800/1*smlqiHawrQXC1O5hYrURMw.png"></div></figure><figure name="5d8a" id="5d8a" class="graf graf--figure graf-after--figure graf--trailing"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 258px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 36.8%;"></div><img class="graf-image" data-image-id="1*dcNmBAAcYuYrKj3qEfTKOg.png" data-width="3538" data-height="1303" src="https://cdn-images-1.medium.com/max/800/1*dcNmBAAcYuYrKj3qEfTKOg.png"></div><figcaption class="imageCaption">Me</figcaption></figure></div></div></section>
+</section>

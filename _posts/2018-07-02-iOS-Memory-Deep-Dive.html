@@ -1,0 +1,83 @@
+---
+layout: post
+title:  "iOS Memory Deep Dive"
+subtitle: "WWDC 2018"
+date:   2018-07-02 06:33:25 -0000
+background: '/img/posts/wwdc18.png'
+---
+
+
+
+
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>iOS Memory Deep Dive</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">iOS Memory Deep Dive</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+WWDC 2018
+</section>
+<section data-field="body" class="e-content">
+<section name="be63" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="220a" id="220a" class="graf graf--h3 graf--leading graf--title">iOS Memory Deep Dive</h3><h4 name="7679" id="7679" class="graf graf--h4 graf-after--h3 graf--subtitle"><a href="https://developer.apple.com/videos/play/wwdc2018/416/" data-href="https://developer.apple.com/videos/play/wwdc2018/416/" class="markup--anchor markup--h4-anchor" rel="noopener" target="_blank">WWDC 2018</a></h4><h3 name="faf0" id="faf0" class="graf graf--h3 graf-after--h4"><strong class="markup--strong markup--h3-strong"><em class="markup--em markup--h3-em">didReceiveMemoryWarning( )</em></strong></h3><ul class="postList"><li name="e780" id="e780" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">Don’t necessarily assume</strong> that a memory warning is your cause.<br>The warning will occur when user gets a call, message, etc.</li></ul><blockquote name="9863" id="9863" class="graf graf--blockquote graf-after--li"><strong class="markup--strong markup--blockquote-strong">Be careful</strong> when you delete a cache in the <strong class="markup--strong markup--blockquote-strong"><em class="markup--em markup--blockquote-em">didReceiveMemoryWarning</em></strong>( )</blockquote><blockquote name="8a59" id="8a59" class="graf graf--blockquote graf-after--blockquote"><em class="markup--em markup--blockquote-em">Access</em> the compressed dictionary → <strong class="markup--strong markup--blockquote-strong"><em class="markup--em markup--blockquote-em">Decompress</em></strong> the dictionary (<strong class="markup--strong markup--blockquote-strong">Memory Increased</strong>) → Delete the data</blockquote><blockquote name="3d00" id="3d00" class="graf graf--blockquote graf-after--blockquote"><strong class="markup--strong markup--blockquote-strong"><em class="markup--em markup--blockquote-em">Result</em></strong>: <strong class="markup--strong markup--blockquote-strong">Same</strong> allocations (Compressed Dictionary <strong class="markup--strong markup--blockquote-strong">=</strong> Updated Dictionary)</blockquote><figure name="99bd" id="99bd" class="graf graf--figure graf-after--blockquote"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 320px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 45.7%;"></div><img class="graf-image" data-image-id="1*fRHd8vq1oifuD7GghMZ7eQ.gif" data-width="1280" data-height="585" src="https://cdn-images-1.medium.com/max/800/1*fRHd8vq1oifuD7GghMZ7eQ.gif"></div></figure><h3 name="6a79" id="6a79" class="graf graf--h3 graf-after--figure">Tools for Profiling Footprint</h3><h4 name="9ad1" id="9ad1" class="graf graf--h4 graf-after--h3">Memory resource exception</h4><figure name="141e" id="141e" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 286px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 40.9%;"></div><img class="graf-image" data-image-id="1*19BtJE8IlPYFMIxahTA1pw.png" data-width="2915" data-height="1192" src="https://cdn-images-1.medium.com/max/800/1*19BtJE8IlPYFMIxahTA1pw.png"></div></figure><h4 name="0bac" id="0bac" class="graf graf--h4 graf-after--figure">vmmap</h4><ul class="postList"><li name="a1d9" id="a1d9" class="graf graf--li graf-after--h4">Virtual memory regions allocated in a process</li></ul><figure name="4cbf" id="4cbf" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 515px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 73.6%;"></div><img class="graf-image" data-image-id="1*MiWHBxoqpihumaGjsRGsig.png" data-width="2614" data-height="1924" src="https://cdn-images-1.medium.com/max/800/1*MiWHBxoqpihumaGjsRGsig.png"></div></figure><h4 name="003c" id="003c" class="graf graf--h4 graf-after--figure">vmmap + AWK</h4><figure name="eed5" id="eed5" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 78px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 11.1%;"></div><img class="graf-image" data-image-id="1*vZuFndlrT4g_JjSX091rqg.png" data-width="2845" data-height="315" src="https://cdn-images-1.medium.com/max/800/1*vZuFndlrT4g_JjSX091rqg.png"></div></figure><h4 name="36b2" id="36b2" class="graf graf--h4 graf-after--figure">leaks</h4><ul class="postList"><li name="9962" id="9962" class="graf graf--li graf-after--h4">Objects that are allocated, but <strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">no longer referenced</em></strong></li></ul><figure name="9c1b" id="9c1b" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 432px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 61.8%;"></div><img class="graf-image" data-image-id="1*vCboFyfDlnwmr-g4T4JefQ.png" data-width="2924" data-height="1806" src="https://cdn-images-1.medium.com/max/800/1*vCboFyfDlnwmr-g4T4JefQ.png"></div></figure><h4 name="9f7e" id="9f7e" class="graf graf--h4 graf-after--figure">heap</h4><ul class="postList"><li name="98ce" id="98ce" class="graf graf--li graf-after--h4">Objects allocated on the heap</li><li name="eaf0" id="eaf0" class="graf graf--li graf-after--li">Useful for identifying large object in memory and what allocated it</li></ul><figure name="cea8" id="cea8" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 548px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 78.3%;"></div><img class="graf-image" data-image-id="1*88DhG0_MMnADPW_3cfFDVA.png" data-width="2574" data-height="2016" src="https://cdn-images-1.medium.com/max/800/1*88DhG0_MMnADPW_3cfFDVA.png"></div></figure><h4 name="a86b" id="a86b" class="graf graf--h4 graf-after--figure">Enabling malloc stack logging</h4><figure name="2f5e" id="2f5e" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 334px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 47.8%;"></div><img class="graf-image" data-image-id="1*raz1_4JvvzHH3RzTsWjXVg.png" data-width="2796" data-height="1336" src="https://cdn-images-1.medium.com/max/800/1*raz1_4JvvzHH3RzTsWjXVg.png"></div></figure><h4 name="49b2" id="49b2" class="graf graf--h4 graf-after--figure">malloc_history</h4><ul class="postList"><li name="f862" id="f862" class="graf graf--li graf-after--h4">Backtraces for malloc and anonymous VM region allocations</li></ul><figure name="0e0f" id="0e0f" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 407px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 58.199999999999996%;"></div><img class="graf-image" data-image-id="1*I8IQ5HEjZYtS_5YO4pP5Pg.png" data-width="3070" data-height="1786" src="https://cdn-images-1.medium.com/max/800/1*I8IQ5HEjZYtS_5YO4pP5Pg.png"></div></figure><h4 name="749e" id="749e" class="graf graf--h4 graf-after--figure">Which tool to pick?</h4><figure name="88b9" id="88b9" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 122px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 17.4%;"></div><img class="graf-image" data-image-id="1*P9q6CF1_tqTpZS-yheWVkA.png" data-width="3072" data-height="534" src="https://cdn-images-1.medium.com/max/800/1*P9q6CF1_tqTpZS-yheWVkA.png"></div></figure><h3 name="7d05" id="7d05" class="graf graf--h3 graf-after--figure">Images</h3><ul class="postList"><li name="c9f0" id="c9f0" class="graf graf--li graf-after--h3">Stop using <strong class="markup--strong markup--li-strong">UIGraphicsBeginImageContextWithOptions</strong></li><li name="da09" id="da09" class="graf graf--li graf-after--li">Using <strong class="markup--strong markup--li-strong">UIGraphicsImageRenderer (iOS 10)<br>Automatically picks best graphics format !</strong></li></ul><figure name="1d07" id="1d07" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 696px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 99.5%;"></div><img class="graf-image" data-image-id="1*ZSm5wnifzZLOYn6FexXHoQ.png" data-width="2318" data-height="2306" src="https://cdn-images-1.medium.com/max/800/1*ZSm5wnifzZLOYn6FexXHoQ.png"></div></figure><h4 name="dd08" id="dd08" class="graf graf--h4 graf-after--figure">Downsampling</h4><ul class="postList"><li name="3bc8" id="3bc8" class="graf graf--li graf-after--h4"><strong class="markup--strong markup--li-strong">ImageIO</strong> can read image sizes and metadata information <strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">without dirtying memory</em></strong></li><li name="2422" id="2422" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">ImageIO</strong> can read resize images at cost of resized image only</li></ul><figure name="3a55" id="3a55" class="graf graf--figure graf-after--li graf--trailing"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 698px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 99.7%;"></div><img class="graf-image" data-image-id="1*XzMRknw_DyOd2RrdgG-LEw.png" data-width="2308" data-height="2302" src="https://cdn-images-1.medium.com/max/800/1*XzMRknw_DyOd2RrdgG-LEw.png"></div></figure></div></div></section>
+</section>

@@ -1,0 +1,83 @@
+---
+layout: post
+title:  "Advanced Debugging with Xcode and LLDB"
+subtitle: "WWDC 2018"
+date:   2018-06-30 23:45:13 -0000
+background: '/img/posts/wwdc18.png'
+---
+
+
+
+
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Advanced Debugging with Xcode and LLDB</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Advanced Debugging with Xcode and LLDB</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+WWDC 2018
+</section>
+<section data-field="body" class="e-content">
+<section name="c7a3" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="9086" id="9086" class="graf graf--h3 graf--leading graf--title">Advanced Debugging with Xcode and LLDB</h3><h4 name="f060" id="f060" class="graf graf--h4 graf-after--h3 graf--subtitle"><a href="https://developer.apple.com/videos/play/wwdc2018/412/" data-href="https://developer.apple.com/videos/play/wwdc2018/412/" class="markup--anchor markup--h4-anchor" rel="noopener" target="_blank">WWDC 2018</a></h4><h3 name="57ef" id="57ef" class="graf graf--h3 graf--startsWithDoubleQuote graf-after--h4">“Failed to get module from AST context”</h3><figure name="1872" id="1872" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 195px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 27.800000000000004%;"></div><img class="graf-image" data-image-id="1*lTNLB80ieI4g8Xvy3CZxOQ.png" data-width="2272" data-height="632" src="https://cdn-images-1.medium.com/max/800/1*lTNLB80ieI4g8Xvy3CZxOQ.png"></div></figure><h3 name="9246" id="9246" class="graf graf--h3 graf-after--figure">Swift Type Resolution</h3><figure name="961f" id="961f" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 198px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 28.299999999999997%;"></div><img class="graf-image" data-image-id="1*OKAV6C7TWnqX1p_XSYAvCQ.png" data-width="2280" data-height="646" src="https://cdn-images-1.medium.com/max/800/1*OKAV6C7TWnqX1p_XSYAvCQ.png"></div></figure><h3 name="ef36" id="ef36" class="graf graf--h3 graf-after--figure">Advanced Debugging Tips and Tricks</h3><h4 name="f940" id="f940" class="graf graf--h4 graf-after--h3">Debug Tab 👍</h4><figure name="c6d5" id="c6d5" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 335px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 47.8%;"></div><img class="graf-image" data-image-id="1*SNwM9xguNqUaTptXNDwvGA.gif" data-width="1280" data-height="612" src="https://cdn-images-1.medium.com/max/800/1*SNwM9xguNqUaTptXNDwvGA.gif"></div></figure><figure name="a167" id="a167" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 421px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 60.199999999999996%;"></div><img class="graf-image" data-image-id="1*xRlHid0zqsZi6SmbHE8tPg.png" data-width="2619" data-height="1577" src="https://cdn-images-1.medium.com/max/800/1*xRlHid0zqsZi6SmbHE8tPg.png"></div><figcaption class="imageCaption">Debug Tab Settings</figcaption></figure><h4 name="6b5f" id="6b5f" class="graf graf--h4 graf-after--figure">expression (change a value)</h4><figure name="15a2" id="15a2" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 552px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 78.8%;"></div><img class="graf-image" data-image-id="1*gApFVGFrjLrrklevEuv5-Q.gif" data-width="756" data-height="596" src="https://cdn-images-1.medium.com/max/800/1*gApFVGFrjLrrklevEuv5-Q.gif"></div></figure><figure name="c3b9" id="c3b9" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 394px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.3%;"></div><img class="graf-image" data-image-id="1*oMfkGCE6pDA9oJhhqwjgCA.gif" data-width="1280" data-height="720" src="https://cdn-images-1.medium.com/max/800/1*oMfkGCE6pDA9oJhhqwjgCA.gif"></div></figure><p name="3b90" id="3b90" class="graf graf--p graf-after--figure">You can test your code without reRun 👍</p><figure name="b413" id="b413" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 394px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.3%;"></div><img class="graf-image" data-image-id="1*9EOqLOFBNM4a2TUCNls9Hg.gif" data-width="1280" data-height="720" src="https://cdn-images-1.medium.com/max/800/1*9EOqLOFBNM4a2TUCNls9Hg.gif"></div></figure><h4 name="c93c" id="c93c" class="graf graf--h4 graf-after--figure">Symbolic Breakpoint</h4><ul class="postList"><li name="4f8f" id="4f8f" class="graf graf--li graf-after--h4">symbolic breakpoint <strong class="markup--strong markup--li-strong">→</strong> use commands (<em class="markup--em markup--li-em">$arg1, $arg2, etc</em>) for more detail</li></ul><figure name="61e9" id="61e9" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 394px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.3%;"></div><img class="graf-image" data-image-id="1*hZhVB-Zj1GQrcfI6rzb0_A.gif" data-width="1280" data-height="720" src="https://cdn-images-1.medium.com/max/800/1*hZhVB-Zj1GQrcfI6rzb0_A.gif"></div></figure><figure name="e54c" id="e54c" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 408px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 58.3%;"></div><img class="graf-image" data-image-id="1*7tywsyADfVOXUCf1h-Xqog.png" data-width="2619" data-height="1526" src="https://cdn-images-1.medium.com/max/800/1*7tywsyADfVOXUCf1h-Xqog.png"></div></figure><h4 name="4f55" id="4f55" class="graf graf--h4 graf-after--figure">One shot breakpoint</h4><ul class="postList"><li name="2c13" id="2c13" class="graf graf--li graf-after--h4"><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Temporary</em></strong><em class="markup--em markup--li-em"> </em>breakpoint that’s <strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">automatically deleted</em></strong></li><li name="38cd" id="38cd" class="graf graf--li graf-after--li">breakpoint set --one-shot true --name “-[UILabel setText:]”</li></ul><figure name="3581" id="3581" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 413px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 59%;"></div><img class="graf-image" data-image-id="1*vZKzMjWbFMLsfpglRVB10Q.png" data-width="3604" data-height="2126" src="https://cdn-images-1.medium.com/max/800/1*vZKzMjWbFMLsfpglRVB10Q.png"></div></figure><h4 name="d52d" id="d52d" class="graf graf--h4 graf-after--figure">Instruction Pointer</h4><ul class="postList"><li name="249c" id="249c" class="graf graf--li graf-after--h4"><strong class="markup--strong markup--li-strong">With great power comes great responsibility (The riskiest feature)</strong></li><li name="60f9" id="60f9" class="graf graf--li graf-after--li">It <strong class="markup--strong markup--li-strong">can not guarantee</strong> that the application’s state will remain intact, <br>i.e., memory issues</li></ul><figure name="8cc1" id="8cc1" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 394px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.3%;"></div><img class="graf-image" data-image-id="1*jjqz1YwhCYDtki0nIkfdSA.gif" data-width="1280" data-height="720" src="https://cdn-images-1.medium.com/max/800/1*jjqz1YwhCYDtki0nIkfdSA.gif"></div></figure><figure name="d0c3" id="d0c3" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 413px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 59%;"></div><img class="graf-image" data-image-id="1*SJBdTzmoAbDHm5QfVLJaLg.png" data-width="3604" data-height="2126" src="https://cdn-images-1.medium.com/max/800/1*SJBdTzmoAbDHm5QfVLJaLg.png"></div></figure><h4 name="51a1" id="51a1" class="graf graf--h4 graf-after--figure">CustomDebugStringConvertible</h4><figure name="297f" id="297f" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 477px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 68.10000000000001%;"></div><img class="graf-image" data-image-id="1*BRq5dsLCNFCEK0tfz4CwEg.png" data-width="2052" data-height="1398" src="https://cdn-images-1.medium.com/max/800/1*BRq5dsLCNFCEK0tfz4CwEg.png"></div></figure><h4 name="592c" id="592c" class="graf graf--h4 graf-after--figure">Watchpoint 👍</h4><ul class="postList"><li name="7e81" id="7e81" class="graf graf--li graf-after--h4">It pauses the debugger the <strong class="markup--strong markup--li-strong">next time</strong> the value of that<strong class="markup--strong markup--li-strong"> variable is changed</strong>.</li></ul><figure name="9588" id="9588" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 833px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 119%;"></div><img class="graf-image" data-image-id="1*KZkcM5C8p1kZ2gqbZFKf0Q.png" data-width="3529" data-height="4198" src="https://cdn-images-1.medium.com/max/800/1*KZkcM5C8p1kZ2gqbZFKf0Q.png"></div></figure><h4 name="3b87" id="3b87" class="graf graf--h4 graf-after--figure">UIView.recursiveDescription( )</h4><figure name="1010" id="1010" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 38px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 5.4%;"></div><img class="graf-image" data-image-id="1*9xFnfqxSiwvcmjIagVAGDg.png" data-width="1976" data-height="107" src="https://cdn-images-1.medium.com/max/800/1*9xFnfqxSiwvcmjIagVAGDg.png"></div><figcaption class="imageCaption">recursiveDescription command</figcaption></figure><h4 name="57ee" id="57ee" class="graf graf--h4 graf-after--figure">unsafeBitCast(memory address, to: )</h4><figure name="4c8e" id="4c8e" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 149px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 21.3%;"></div><img class="graf-image" data-image-id="1*5xTfojxslAK-V7V7Gym0eg.png" data-width="1980" data-height="421" src="https://cdn-images-1.medium.com/max/800/1*5xTfojxslAK-V7V7Gym0eg.png"></div><figcaption class="imageCaption">Change a value → flush () to apply the value</figcaption></figure><h3 name="ed49" id="ed49" class="graf graf--h3 graf-after--figure">LLDB Print Commands</h3><figure name="85d0" id="85d0" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 222px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 31.7%;"></div><img class="graf-image" data-image-id="1*Rm_GAtQYRapYd6UUwzy18w.png" data-width="2796" data-height="886" src="https://cdn-images-1.medium.com/max/800/1*Rm_GAtQYRapYd6UUwzy18w.png"></div></figure><h3 name="41ce" id="41ce" class="graf graf--h3 graf-after--figure">Advanced View Debugging</h3><ul class="postList"><li name="100d" id="100d" class="graf graf--li graf-after--h3">You can <strong class="markup--strong markup--li-strong">get </strong>an object info and <strong class="markup--strong markup--li-strong">edit</strong> a value <strong class="markup--strong markup--li-strong">in debugging</strong>.</li><li name="9a01" id="9a01" class="graf graf--li graf-after--li">po ((NSLayoutConstraint *)memory address)</li><li name="3e9d" id="3e9d" class="graf graf--li graf-after--li">e [((NSLayoutConstraint *)memory address setConstant:-30]</li></ul><figure name="ee07" id="ee07" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 187px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 26.8%;"></div><img class="graf-image" data-image-id="1*4f98Iv7jKIevXEGSkYaONg.png" data-width="1726" data-height="462" src="https://cdn-images-1.medium.com/max/800/1*4f98Iv7jKIevXEGSkYaONg.png"></div></figure><figure name="c9eb" id="c9eb" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 189px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 27%;"></div><img class="graf-image" data-image-id="1*rvqoedToORDwADJwv0xIvw.png" data-width="1743" data-height="471" src="https://cdn-images-1.medium.com/max/800/1*rvqoedToORDwADJwv0xIvw.png"></div></figure><h3 name="67b3" id="67b3" class="graf graf--h3 graf-after--figure">All Allocation and Free History</h3><ul class="postList"><li name="9636" id="9636" class="graf graf--li graf-after--h3">Allocation backtrack for all selected in the view debugger</li></ul><figure name="ac20" id="ac20" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 418px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 59.8%;"></div><img class="graf-image" data-image-id="1*CHMw-vrynJBYafuji0BEdg.png" data-width="2784" data-height="1664" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*CHMw-vrynJBYafuji0BEdg.png"></div></figure><h4 name="9a13" id="9a13" class="graf graf--h4 graf-after--figure">Backtrace → Go to code 👍</h4><figure name="fe3d" id="fe3d" class="graf graf--figure graf-after--h4 graf--trailing"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 394px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.3%;"></div><img class="graf-image" data-image-id="1*vQcK1tXTJz-wbiAdRgaq4w.gif" data-width="1280" data-height="720" src="https://cdn-images-1.medium.com/max/800/1*vQcK1tXTJz-wbiAdRgaq4w.gif"></div></figure></div></div></section>
+</section>

@@ -1,0 +1,83 @@
+---
+layout: post
+title:  "AVSpeechSynthesis"
+subtitle: "WWDC 2018"
+date:   2018-09-13 01:39:12 -0000
+background: '/img/posts/wwdc18.png'
+---
+
+
+
+
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>AVSpeechSynthesis</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">AVSpeechSynthesis</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+WWDC 2018
+</section>
+<section data-field="body" class="e-content">
+<section name="335e" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="2a21" id="2a21" class="graf graf--h3 graf--leading graf--title">AVSpeechSynthesis</h3><h4 name="3cb2" id="3cb2" class="graf graf--h4 graf-after--h3 graf--subtitle"><a href="https://developer.apple.com/videos/play/wwdc2018/236/" data-href="https://developer.apple.com/videos/play/wwdc2018/236/" class="markup--anchor markup--h4-anchor" rel="noopener" target="_blank">WWDC 2018</a></h4><h3 name="11e5" id="11e5" class="graf graf--h3 graf-after--h4">AVSpeechSynthesis</h3><ul class="postList"><li name="4d18" id="4d18" class="graf graf--li graf-after--h3">API for computer synthesized speech</li><li name="23dd" id="23dd" class="graf graf--li graf-after--li">Uses<br>- Announcements<br>- Non-sighted interfaces<br>- Education apps<br>- Many more…</li><li name="4223" id="4223" class="graf graf--li graf-after--li">Example — Audio updates during a workout</li></ul><h3 name="125a" id="125a" class="graf graf--h3 graf-after--li">AVSpeechSynthesis and Accessibility</h3><ul class="postList"><li name="aea2" id="aea2" class="graf graf--li graf-after--h3">Powerful tool for helping many users<br>- Congnitive<br>- Speech vocalization<br>- Non-sighted</li><li name="823e" id="823e" class="graf graf--li graf-after--li">Not a replacement for VoiceOver<br>- Speech can overlap with VoiceOver’s<br>- Won’t be available to Braille devices<br>- Make your app accessible instead using <code class="markup--code markup--li-code"><strong class="markup--strong markup--li-strong">UIAccessibility</strong></code></li></ul><h3 name="31d2" id="31d2" class="graf graf--h3 graf-after--li">Basics</h3><ol class="postList"><li name="cafd" id="cafd" class="graf graf--li graf-after--h3">Create <code class="markup--code markup--li-code"><strong class="markup--strong markup--li-strong">AVSpeechSynthesizer</strong></code></li></ol><p name="c6a2" id="c6a2" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">2. Ensure it’s retained until speech is done ⚠️<br> ( Speech will be cancelled in the synthesizer is deallocated )</strong></p><figure name="8b21" id="8b21" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 79px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 11.200000000000001%;"></div><img class="graf-image" data-image-id="1*5eK6SRUq6QhZwoiUYAB1Bg.png" data-width="2188" data-height="246" src="https://cdn-images-1.medium.com/max/800/1*5eK6SRUq6QhZwoiUYAB1Bg.png"></div></figure><p name="6025" id="6025" class="graf graf--p graf-after--figure">3. Create an utterance</p><p name="0624" id="0624" class="graf graf--p graf-after--p">4. Dispatch to synthesizer</p><figure name="8afd" id="8afd" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 105px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 14.899999999999999%;"></div><img class="graf-image" data-image-id="1*Wof-9P5NgF_iIoGqNRG4FA.png" data-width="2650" data-height="396" src="https://cdn-images-1.medium.com/max/800/1*Wof-9P5NgF_iIoGqNRG4FA.png"></div></figure><h3 name="157c" id="157c" class="graf graf--h3 graf-after--figure">AVSpeechSynthesis and Audio Sessions</h3><ul class="postList"><li name="3e01" id="3e01" class="graf graf--li graf-after--h3"><code class="markup--code markup--li-code"><strong class="markup--strong markup--li-strong">AVAudioSession</strong></code> <em class="markup--em markup--li-em">automatically</em> activated on <code class="markup--code markup--li-code"><strong class="markup--strong markup--li-strong">speak()</strong></code></li><li name="d5c6" id="d5c6" class="graf graf--li graf-after--li">To mix with other audio, use</li></ul><figure name="b418" id="b418" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 54px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 7.7%;"></div><img class="graf-image" data-image-id="1*V7-TbyT_DBOxTBNy2Lqsqw.png" data-width="3836" data-height="294" src="https://cdn-images-1.medium.com/max/800/1*V7-TbyT_DBOxTBNy2Lqsqw.png"></div></figure><ul class="postList"><li name="4e1c" id="4e1c" class="graf graf--li graf-after--figure">To duck other audio, use</li></ul><figure name="cd73" id="cd73" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 22px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 3.2%;"></div><img class="graf-image" data-image-id="1*LI012qtyTD4Jp0qStj9-Ig.png" data-width="4686" data-height="150" src="https://cdn-images-1.medium.com/max/800/1*LI012qtyTD4Jp0qStj9-Ig.png"></div></figure><h3 name="3ddd" id="3ddd" class="graf graf--h3 graf-after--figure">Callbacks</h3><ul class="postList"><li name="f8da" id="f8da" class="graf graf--li graf-after--h3">Delegate methods inform about the life cycle of an utterance</li><li name="9118" id="9118" class="graf graf--li graf-after--li"><code class="markup--code markup--li-code"><strong class="markup--strong markup--li-strong">AVSpeechSynthesizerDelegate</strong></code> defines optional methods<br>- Speech started<br>- Speech finished<br>- Character range will be spoken<br>- Speech paused<br>- Speech continued</li></ul><figure name="6432" id="6432" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 365px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 52.1%;"></div><img class="graf-image" data-image-id="1*1VvfRs3GHN2ltLrJiPEGVQ.png" data-width="4572" data-height="2384" src="https://cdn-images-1.medium.com/max/800/1*1VvfRs3GHN2ltLrJiPEGVQ.png"></div></figure><figure name="48e9" id="48e9" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 337px; max-height: 676px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 200.59999999999997%;"></div><img class="graf-image" data-image-id="1*4F--s3aMpPnpL4yDhQj35w.gif" data-width="337" data-height="676" src="https://cdn-images-1.medium.com/max/800/1*4F--s3aMpPnpL4yDhQj35w.gif"></div></figure><h3 name="b7a4" id="b7a4" class="graf graf--h3 graf-after--figure">Choosing the Right Voice</h3><ul class="postList"><li name="ce26" id="ce26" class="graf graf--li graf-after--h3">Built in voices (1 for each supported language)</li><li name="8c4e" id="8c4e" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Siri voices not available through API</strong></li><li name="93be" id="93be" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Users can download ⏬ higher quality voices</strong></li><li name="1066" id="1066" class="graf graf--li graf-after--li">Select with an identifier or a language</li><li name="ecc1" id="ecc1" class="graf graf--li graf-after--li">Selecting by language will select the users default voice</li></ul><figure name="5c84" id="5c84" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 170px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 24.3%;"></div><img class="graf-image" data-image-id="1*-MrQDKnwO4YYFkBd4JumxQ.png" data-width="4040" data-height="982" src="https://cdn-images-1.medium.com/max/800/1*-MrQDKnwO4YYFkBd4JumxQ.png"></div></figure><figure name="b384" id="b384" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 313px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 44.7%;"></div><img class="graf-image" data-image-id="1*CPf-euCOpfyJW1fkimpITA.png" data-width="4372" data-height="1956" src="https://cdn-images-1.medium.com/max/800/1*CPf-euCOpfyJW1fkimpITA.png"></div></figure><h3 name="ebaf" id="ebaf" class="graf graf--h3 graf-after--figure">Speech Rate</h3><ul class="postList"><li name="97fb" id="97fb" class="graf graf--li graf-after--h3">Controls the rate of speech <strong class="markup--strong markup--li-strong">[</strong> <em class="markup--em markup--li-em">0 ~ 1.0 </em><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">]<br></em></strong>- Speaking Rate is scaled from ≅ 0x ➜ 1x with values <strong class="markup--strong markup--li-strong">[</strong> <em class="markup--em markup--li-em">0, 0.5</em><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em"> </em>]</strong><br>- Speaking Rate is scaled from 1x ➜ 4x with values <strong class="markup--strong markup--li-strong">[</strong> <em class="markup--em markup--li-em">0.5, 1</em><strong class="markup--strong markup--li-strong"> ]</strong></li></ul><figure name="f784" id="f784" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 191px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 27.3%;"></div><img class="graf-image" data-image-id="1*hR3Ce1UPj3kOVVVjdwmVoA.png" data-width="2680" data-height="732" src="https://cdn-images-1.medium.com/max/800/1*hR3Ce1UPj3kOVVVjdwmVoA.png"></div></figure><h3 name="9d01" id="9d01" class="graf graf--h3 graf-after--figure">Pitch and Volume</h3><p name="319f" id="319f" class="graf graf--p graf-after--h3">Set properties on <code class="markup--code markup--p-code"><strong class="markup--strong markup--p-strong">AVSpeechUtterance</strong></code></p><ul class="postList"><li name="2e3b" id="2e3b" class="graf graf--li graf-after--p">Pitch <strong class="markup--strong markup--li-strong">[</strong> <em class="markup--em markup--li-em">0 ~ 1.0 </em><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">]</em></strong></li><li name="30ed" id="30ed" class="graf graf--li graf-after--li">Volume <strong class="markup--strong markup--li-strong">[</strong> <em class="markup--em markup--li-em">0 ~ 1.0 </em><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">]</em></strong></li></ul><figure name="7b50" id="7b50" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 86px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 12.2%;"></div><img class="graf-image" data-image-id="1*9q-3lKycFjU-fqSKGkWEJA.png" data-width="3732" data-height="456" src="https://cdn-images-1.medium.com/max/800/1*9q-3lKycFjU-fqSKGkWEJA.png"></div></figure><h3 name="b766" id="b766" class="graf graf--h3 graf-after--figure">Attributed Strings</h3><ul class="postList"><li name="4ce0" id="4ce0" class="graf graf--li graf-after--h3">Customize behavior of generated speech with attributes</li><li name="ddb0" id="ddb0" class="graf graf--li graf-after--li">IPA Notation<br>- International Phonetic Alphabet<br>- Uses — Specialized names, proper nouns, business names…<br>- Available — en-US, en-AU, en-GB, de-DE, es-ES, es-MX, fr-CA, fr-FR, it-IT, ja-JP<br>- Example — iPhone = ˈa͡ɪ.ˈfo͡ʊn</li></ul><h3 name="fd62" id="fd62" class="graf graf--h3 graf-after--li">IPA Notation</h3><ul class="postList"><li name="4ccd" id="4ccd" class="graf graf--li graf-after--h3">How do you generate IPA notation?</li><li name="988c" id="988c" class="graf graf--li graf-after--li">Settings &gt; General &gt; Accessibility &gt; Speech &gt; Pronunciations</li></ul><figure name="f99f" id="f99f" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 338px; max-height: 679px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 200.89999999999998%;"></div><img class="graf-image" data-image-id="1*j-8xiaM8YjN66ue8WW78-w.gif" data-width="338" data-height="679" src="https://cdn-images-1.medium.com/max/800/1*j-8xiaM8YjN66ue8WW78-w.gif"></div></figure><ul class="postList"><li name="5348" id="5348" class="graf graf--li graf-after--figure">Use attributed string API with IPA pronunciation</li></ul><figure name="e20d" id="e20d" class="graf graf--figure graf-after--li graf--trailing"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 117px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 16.7%;"></div><img class="graf-image" data-image-id="1*Zyw8asB93QIi_y4MMQWsoA.png" data-width="4310" data-height="718" src="https://cdn-images-1.medium.com/max/800/1*Zyw8asB93QIi_y4MMQWsoA.png"></div></figure></div></div></section>
+</section>

@@ -1,0 +1,83 @@
+---
+layout: post
+title:  "Updating for Apple Watch Series 3"
+subtitle: "WWDC 2018"
+date:   2018-09-30 08:15:49 -0000
+background: '/img/posts/wwdc18.png'
+---
+
+
+
+
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Updating for Apple Watch Series 3</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Updating for Apple Watch Series 3</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Tech Talks
+</section>
+<section data-field="body" class="e-content">
+<section name="8d5f" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="9386" id="9386" class="graf graf--h3 graf--leading graf--title">Updating for Apple Watch Series 3</h3><h4 name="7538" id="7538" class="graf graf--h4 graf-after--h3 graf--subtitle"><a href="https://developer.apple.com/videos/play/tech-talks/203" data-href="https://developer.apple.com/videos/play/tech-talks/203" class="markup--anchor markup--h4-anchor" rel="noopener" target="_blank">Tech Talks</a></h4><figure name="e1aa" id="e1aa" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 438px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 62.5%;"></div><img class="graf-image" data-image-id="1*53lN084DM2nJEccqOLkQBQ.png" data-width="3360" data-height="2100" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*53lN084DM2nJEccqOLkQBQ.png"></div><figcaption class="imageCaption">WiFi, Cellular</figcaption></figure><h3 name="b8d6" id="b8d6" class="graf graf--h3 graf-after--figure">URLSession</h3><ul class="postList"><li name="cf60" id="cf60" class="graf graf--li graf-after--h3">Initiate requests from Apple Watch</li><li name="3509" id="3509" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Requests may be proxied through iPhone</strong></li></ul><figure name="7561" id="7561" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 514px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 73.4%;"></div><img class="graf-image" data-image-id="1*Hytwv1FNQYZ414QXrzemOw.png" data-width="1622" data-height="1191" src="https://cdn-images-1.medium.com/max/800/1*Hytwv1FNQYZ414QXrzemOw.png"></div></figure><h3 name="6386" id="6386" class="graf graf--h3 graf-after--figure">URLSession Over Cellular</h3><ul class="postList"><li name="3379" id="3379" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">Default and ephemeral sessions<br>- </strong>Allowed when app state is active<br>- Disallowed when app state is inactive or background<br> Except when in a background navigation mode</li><li name="e144" id="e144" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Background sessions<br></strong>- Smaller transfers are better<br>- Transfers may be deferred until later<br>- Response will wake your app in frontmost app state</li></ul><h3 name="8421" id="8421" class="graf graf--h3 graf-after--li">Best Practices</h3><ul class="postList"><li name="dd26" id="dd26" class="graf graf--li graf-after--h3">Use <code class="markup--code markup--li-code">waitsForConnectivity</code> instead of SCNetworkReachbility</li><li name="b540" id="b540" class="graf graf--li graf-after--li"><code class="markup--code markup--li-code">applicationWillResignActive()</code></li><li name="a977" id="a977" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Use the shared URLSession for multiple tasks</strong></li></ul><h3 name="68e4" id="68e4" class="graf graf--h3 graf-after--li">Watch Connectivity</h3><ul class="postList"><li name="6021" id="6021" class="graf graf--li graf-after--h3">Use for initial setup</li><li name="023c" id="023c" class="graf graf--li graf-after--li">Background transfers</li><li name="3a1c" id="3a1c" class="graf graf--li graf-after--li">Update application context for newer data</li></ul><h3 name="0221" id="0221" class="graf graf--h3 graf-after--li">Barometric Altimeter</h3><figure name="9423" id="9423" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 576px; max-height: 296px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 51.4%;"></div><img class="graf-image" data-image-id="1*moLrL5JC_X4qvGoks8udSA.gif" data-width="576" data-height="296" src="https://cdn-images-1.medium.com/max/800/1*moLrL5JC_X4qvGoks8udSA.gif"></div></figure><h3 name="4c13" id="4c13" class="graf graf--h3 graf-after--figure">CMAltimeter</h3><ul class="postList"><li name="4cb5" id="4cb5" class="graf graf--li graf-after--h3">Determines device availability</li><li name="6a15" id="6a15" class="graf graf--li graf-after--li">Surfaces authorization status</li><li name="2321" id="2321" class="graf graf--li graf-after--li">Starts and stops altitude updates</li></ul><h3 name="24d6" id="24d6" class="graf graf--h3 graf-after--li">CMAltitudeData</h3><ul class="postList"><li name="1f34" id="1f34" class="graf graf--li graf-after--h3">Timestamp<br>- Number of seconds since reference date</li></ul><figure name="bfbc" id="bfbc" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 33px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 4.7%;"></div><img class="graf-image" data-image-id="1*hW9VqBzPnRFOz9-pdFqq3w.png" data-width="3036" data-height="142" src="https://cdn-images-1.medium.com/max/800/1*hW9VqBzPnRFOz9-pdFqq3w.png"></div></figure><ul class="postList"><li name="a764" id="a764" class="graf graf--li graf-after--figure">Relative altitude<br>- Change in altitude since last reported event ( in meters )</li><li name="4353" id="4353" class="graf graf--li graf-after--li">Pressure<br>- Recorded pressure ( in kilopascals )</li></ul><figure name="c303" id="c303" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 355px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 50.8%;"></div><img class="graf-image" data-image-id="1*Uk29QVjeIm_tXuXHV_BM_Q.png" data-width="2938" data-height="1492" src="https://cdn-images-1.medium.com/max/800/1*Uk29QVjeIm_tXuXHV_BM_Q.png"></div></figure><figure name="ba28" id="ba28" class="graf graf--figure graf-after--figure graf--trailing"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 127px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 18.099999999999998%;"></div><img class="graf-image" data-image-id="1*ytN04I_h78C7N5mguKMSdA.png" data-width="3234" data-height="586" src="https://cdn-images-1.medium.com/max/800/1*ytN04I_h78C7N5mguKMSdA.png"></div></figure></div></div></section>
+</section>

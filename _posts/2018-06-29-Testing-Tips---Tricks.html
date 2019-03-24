@@ -1,0 +1,82 @@
+---
+layout: post
+title:  "Testing Tips &amp; Tricks"
+subtitle: "WWDC 2018"
+date:   2018-06-29 01:45:13 -0000
+background: '/img/posts/wwdc18.png'
+---
+
+
+
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Testing Tips &amp; Tricks</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Testing Tips &amp; Tricks</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+WWDC 2018
+</section>
+<section data-field="body" class="e-content">
+<section name="48e1" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="4ac6" id="4ac6" class="graf graf--h3 graf--leading graf--title">Testing Tips &amp; Tricks</h3><h4 name="c768" id="c768" class="graf graf--h4 graf-after--h3 graf--subtitle"><a href="https://developer.apple.com/videos/play/wwdc2018/417/" data-href="https://developer.apple.com/videos/play/wwdc2018/417/" class="markup--anchor markup--h4-anchor" rel="noopener" target="_blank">WWDC 2018</a></h4><h3 name="83ff" id="83ff" class="graf graf--h3 graf-after--h4">Unit Tests (request, response)</h3><p name="77ea" id="77ea" class="graf graf--p graf-after--h3">You have to <strong class="markup--strong markup--p-strong">add a glue code</strong> to run the UnitTest. 😕</p><figure name="28a6" id="28a6" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 328px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 46.9%;"></div><img class="graf-image" data-image-id="1*hvz0ZeFxSIIgUA39oyzsHg.png" data-width="2160" data-height="1012" src="https://cdn-images-1.medium.com/max/800/1*hvz0ZeFxSIIgUA39oyzsHg.png"></div></figure><figure name="6676" id="6676" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 700px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 100%;"></div><img class="graf-image" data-image-id="1*gKgPDrQR23VnsVIl-dh-jg.png" data-width="2104" data-height="2103" src="https://cdn-images-1.medium.com/max/800/1*gKgPDrQR23VnsVIl-dh-jg.png"></div></figure><h3 name="db45" id="db45" class="graf graf--h3 graf-after--figure">Unit Tests ( URLSession Task )</h3><figure name="6afd" id="6afd" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 658px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 93.89999999999999%;"></div><img class="graf-image" data-image-id="1*_3IZk3OkuAX8st9_D154iA.png" data-width="2242" data-height="2106" src="https://cdn-images-1.medium.com/max/800/1*_3IZk3OkuAX8st9_D154iA.png"></div></figure><h3 name="805f" id="805f" class="graf graf--h3 graf-after--figure">Integration Tests</h3><p name="688e" id="688e" class="graf graf--p graf-after--h3"><strong class="markup--strong markup--p-strong">Use the URLProtocol.</strong></p><figure name="5d9c" id="5d9c" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 334px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 47.699999999999996%;"></div><img class="graf-image" data-image-id="1*lX2Pomc42DWtD6zfMsMbyw.png" data-width="2162" data-height="1032" src="https://cdn-images-1.medium.com/max/800/1*lX2Pomc42DWtD6zfMsMbyw.png"></div></figure><h3 name="905b" id="905b" class="graf graf--h3 graf-after--figure">How to Use URLProtocol</h3><figure name="395d" id="395d" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 386px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 55.2%;"></div><img class="graf-image" data-image-id="1*B-joct5qtnXNyVRYB4C-Mg.png" data-width="1776" data-height="980" src="https://cdn-images-1.medium.com/max/800/1*B-joct5qtnXNyVRYB4C-Mg.png"></div></figure><figure name="f729" id="f729" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 413px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 59%;"></div><img class="graf-image" data-image-id="1*MXh_4hSqZAGNglMGVSO9rQ.png" data-width="2030" data-height="1198" src="https://cdn-images-1.medium.com/max/800/1*MXh_4hSqZAGNglMGVSO9rQ.png"></div><figcaption class="imageCaption">MockURLProtocol</figcaption></figure><figure name="1375" id="1375" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 368px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 52.6%;"></div><img class="graf-image" data-image-id="1*89lfFvX0qLOCNVsVdzltww.png" data-width="800" data-height="421" src="https://cdn-images-1.medium.com/max/800/1*89lfFvX0qLOCNVsVdzltww.png"></div><figcaption class="imageCaption">startLoading( )</figcaption></figure><figure name="d286" id="d286" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 559px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 79.9%;"></div><img class="graf-image" data-image-id="1*rOtRTgydadw8XAMmPPtd_Q.png" data-width="2384" data-height="1904" src="https://cdn-images-1.medium.com/max/800/1*rOtRTgydadw8XAMmPPtd_Q.png"></div><figcaption class="imageCaption">API Loader Tests</figcaption></figure><h3 name="dbed" id="dbed" class="graf graf--h3 graf-after--figure">End-to-End Tests</h3><p name="7678" id="7678" class="graf graf--p graf-after--h3">Use the <strong class="markup--strong markup--p-strong">Mock Server</strong> instead of a real server.</p><figure name="1d16" id="1d16" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 333px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 47.5%;"></div><img class="graf-image" data-image-id="1*IsV33FhHgsWbHnVIDdjxkw.png" data-width="2172" data-height="1032" src="https://cdn-images-1.medium.com/max/800/1*IsV33FhHgsWbHnVIDdjxkw.png"></div></figure><h3 name="4271" id="4271" class="graf graf--h3 graf-after--figure">Working with Notifications</h3><p name="6e39" id="6e39" class="graf graf--p graf-after--h3"><strong class="markup--strong markup--p-strong">Isolate notifications </strong>( <em class="markup--em markup--p-em">by creating </em><strong class="markup--strong markup--p-strong"><em class="markup--em markup--p-em">your own</em></strong><em class="markup--em markup--p-em"> NotificationCenter </em>)</p><figure name="9103" id="9103" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 629px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 89.8%;"></div><img class="graf-image" data-image-id="1*uGIknUudSYh3-xYnZzpc-A.png" data-width="2492" data-height="2238" src="https://cdn-images-1.medium.com/max/800/1*uGIknUudSYh3-xYnZzpc-A.png"></div><figcaption class="imageCaption">Testing Notification Posters</figcaption></figure><figure name="33f8" id="33f8" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 637px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 91%;"></div><img class="graf-image" data-image-id="1*cIpaKg2u3PdcNCS3U7idBg.png" data-width="2164" data-height="1970" src="https://cdn-images-1.medium.com/max/800/1*cIpaKg2u3PdcNCS3U7idBg.png"></div><figcaption class="imageCaption">Testing Notification Receivers</figcaption></figure><h3 name="d84e" id="d84e" class="graf graf--h3 graf-after--figure">Optimizing App Launch When Testing 👍</h3><figure name="0a5a" id="0a5a" class="graf graf--figure graf-after--h3 graf--trailing"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 549px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 78.4%;"></div><img class="graf-image" data-image-id="1*Ahb66yx9PGBrQDkmao3ZaQ.png" data-width="2380" data-height="1865" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*Ahb66yx9PGBrQDkmao3ZaQ.png"></div></figure></div></div></section>
+</section>

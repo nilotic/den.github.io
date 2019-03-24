@@ -1,0 +1,82 @@
+---
+layout: post
+title:  "Building Faster in Xcode"
+subtitle: "WWDC 2018"
+date:   2018-06-26 23:29:13 -0000
+background: '/img/posts/wwdc18.png'
+---
+
+
+
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Building Faster in Xcode</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Building Faster in Xcode</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+WWDC 2018
+</section>
+<section data-field="body" class="e-content">
+<section name="0c78" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="f431" id="f431" class="graf graf--h3 graf--leading graf--title">Building Faster in Xcode</h3><h4 name="1502" id="1502" class="graf graf--h4 graf-after--h3 graf--subtitle"><a href="https://developer.apple.com/videos/play/wwdc2018/408" data-href="https://developer.apple.com/videos/play/wwdc2018/408" class="markup--anchor markup--h4-anchor" rel="noopener" target="_blank">WWDC 2018</a></h4><h3 name="8d10" id="8d10" class="graf graf--h3 graf-after--h4">Parallelized Build Timeline</h3><figure name="f96d" id="f96d" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 399px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 57.099999999999994%;"></div><img class="graf-image" data-image-id="1*00NxkcQ7-4iJ2X48WA4BCg.png" data-width="3070" data-height="1752" src="https://cdn-images-1.medium.com/max/800/1*00NxkcQ7-4iJ2X48WA4BCg.png"></div></figure><h3 name="f472" id="f472" class="graf graf--h3 graf-after--figure">Examine Tests Dependencies</h3><figure name="96d9" id="96d9" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 184px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 26.400000000000002%;"></div><img class="graf-image" data-image-id="1*uDyAx5TT_xb1iL22hvrbxw.png" data-width="3476" data-height="916" src="https://cdn-images-1.medium.com/max/800/1*uDyAx5TT_xb1iL22hvrbxw.png"></div></figure><h3 name="2198" id="2198" class="graf graf--h3 graf-after--figure">Reduce Dependency Exposure (Code Gen)</h3><ul class="postList"><li name="d255" id="d255" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Reduce dependencies → Increase performance</em></strong></li><li name="e272" id="e272" class="graf graf--li graf-after--li">Move to the front of our build process</li><li name="7a87" id="7a87" class="graf graf--li graf-after--li">Parallelized Build</li></ul><figure name="75a9" id="75a9" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 419px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 59.8%;"></div><img class="graf-image" data-image-id="1*vGCtw7_idzaEkLI9JsMbfQ.png" data-width="2654" data-height="1588" src="https://cdn-images-1.medium.com/max/800/1*vGCtw7_idzaEkLI9JsMbfQ.png"></div><figcaption class="imageCaption">Code Gen</figcaption></figure><h3 name="3a7b" id="3a7b" class="graf graf--h3 graf-after--figure">Parallelized Target Build Process</h3><figure name="ab29" id="ab29" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 113px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 16.2%;"></div><img class="graf-image" data-image-id="1*c1euOebjXo4z5r_LO1EKXQ.png" data-width="3150" data-height="510" src="https://cdn-images-1.medium.com/max/800/1*c1euOebjXo4z5r_LO1EKXQ.png"></div></figure><h3 name="7d58" id="7d58" class="graf graf--h3 graf-after--figure">Customized build process</h3><figure name="6e9e" id="6e9e" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 394px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.3%;"></div><img class="graf-image" data-image-id="1*yPrXElhDAdmlW4P5tkAHQg.png" data-width="3072" data-height="1730" src="https://cdn-images-1.medium.com/max/800/1*yPrXElhDAdmlW4P5tkAHQg.png"></div></figure><h3 name="2d78" id="2d78" class="graf graf--h3 graf-after--figure">Dependency Cycle Detection</h3><figure name="60e3" id="60e3" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 283px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 40.5%;"></div><img class="graf-image" data-image-id="1*Pg1cjODKJPkiFZkKys5bXQ.png" data-width="2664" data-height="1078" src="https://cdn-images-1.medium.com/max/800/1*Pg1cjODKJPkiFZkKys5bXQ.png"></div></figure><h3 name="2cbf" id="2cbf" class="graf graf--h3 graf-after--figure">Measuring Build Time</h3><figure name="4333" id="4333" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 394px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.3%;"></div><img class="graf-image" data-image-id="1*hQ-faQsWePlbYt1PP4f1cg.png" data-width="3468" data-height="1953" src="https://cdn-images-1.medium.com/max/800/1*hQ-faQsWePlbYt1PP4f1cg.png"></div></figure><figure name="e128" id="e128" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 368px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 52.5%;"></div><img class="graf-image" data-image-id="1*MQYvG3xvlMDDDxph3x82ZQ.png" data-width="2970" data-height="1560" src="https://cdn-images-1.medium.com/max/800/1*MQYvG3xvlMDDDxph3x82ZQ.png"></div><figcaption class="imageCaption">Command</figcaption></figure><h3 name="aa7d" id="aa7d" class="graf graf--h3 graf-after--figure">Source-Level Improvements</h3><figure name="5cdb" id="5cdb" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 280px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 40%;"></div><img class="graf-image" data-image-id="1*RM-cPSLllAmMUs8_GFbvoQ.png" data-width="3074" data-height="1230" src="https://cdn-images-1.medium.com/max/800/1*RM-cPSLllAmMUs8_GFbvoQ.png"></div><figcaption class="imageCaption"><strong class="markup--strong markup--figure-strong">Turn off [ Whole Module ] </strong>For Debug Builds</figcaption></figure><h3 name="c257" id="c257" class="graf graf--h3 graf-after--figure">Dealing with Complex Expressions</h3><p name="f500" id="f500" class="graf graf--p graf-after--h3"><strong class="markup--strong markup--p-strong">Increasing build efficiency</strong></p><figure name="d850" id="d850" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 141px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 20.1%;"></div><img class="graf-image" data-image-id="1*9C7nLVO8S_pq6y0R4qhwXA.png" data-width="2820" data-height="568" src="https://cdn-images-1.medium.com/max/800/1*9C7nLVO8S_pq6y0R4qhwXA.png"></div><figcaption class="imageCaption">Use <strong class="markup--strong markup--figure-strong">Explicit Types</strong> for Complex Properties</figcaption></figure><figure name="ed7a" id="ed7a" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 162px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 23.1%;"></div><img class="graf-image" data-image-id="1*JLTYLuVlY5mm-rqqSgUnAw.png" data-width="2896" data-height="670" src="https://cdn-images-1.medium.com/max/800/1*JLTYLuVlY5mm-rqqSgUnAw.png"></div><figcaption class="imageCaption">Break Apart Complex Expressions</figcaption></figure><figure name="832e" id="832e" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 175px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 25.1%;"></div><img class="graf-image" data-image-id="1*Ea37G7-rUFANYgoQVuLI7g.png" data-width="2962" data-height="742" src="https://cdn-images-1.medium.com/max/800/1*Ea37G7-rUFANYgoQVuLI7g.png"></div><figcaption class="imageCaption">Use <strong class="markup--strong markup--figure-strong">Protocol</strong></figcaption></figure><h3 name="f529" id="f529" class="graf graf--h3 graf-after--figure">Mixed-Source App Targets</h3><figure name="d612" id="d612" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 434px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 62.1%;"></div><img class="graf-image" data-image-id="1*Oo-v363KpOg2VgB0XBRV9g.png" data-width="2733" data-height="1696" src="https://cdn-images-1.medium.com/max/800/1*Oo-v363KpOg2VgB0XBRV9g.png"></div></figure><h4 name="f66d" id="f66d" class="graf graf--h4 graf-after--figure">Use private → Hide function</h4><figure name="e893" id="e893" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 281px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 40.2%;"></div><img class="graf-image" data-image-id="1*hAnITby7slMkHUKF289fHA.gif" data-width="1241" data-height="499" src="https://cdn-images-1.medium.com/max/800/1*hAnITby7slMkHUKF289fHA.gif"></div></figure><figure name="6fb3" id="6fb3" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 166px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 23.799999999999997%;"></div><img class="graf-image" data-image-id="1*A0D9NalgsRDe4Ilfh2z6dw.gif" data-width="1237" data-height="294" src="https://cdn-images-1.medium.com/max/800/1*A0D9NalgsRDe4Ilfh2z6dw.gif"></div></figure><h3 name="e1f9" id="e1f9" class="graf graf--h3 graf-after--figure">Keep Your Generated Header Minimal</h3><figure name="57f2" id="57f2" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 93px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 13.3%;"></div><img class="graf-image" data-image-id="1*47NmQlbEtMXX27isIowGdw.png" data-width="3180" data-height="422" src="https://cdn-images-1.medium.com/max/800/1*47NmQlbEtMXX27isIowGdw.png"></div><figcaption class="imageCaption">Turn off [ Swift 3 @objc Interface ]</figcaption></figure><h3 name="6144" id="6144" class="graf graf--h3 graf-after--figure">Keep Your Bridging Header Minimal</h3><figure name="fd27" id="fd27" class="graf graf--figure graf-after--h3 graf--trailing"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 438px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 62.6%;"></div><img class="graf-image" data-image-id="1*i6PPVVpqRhaSCgrT8Axz4A.png" data-width="2636" data-height="1650" src="https://cdn-images-1.medium.com/max/800/1*i6PPVVpqRhaSCgrT8Axz4A.png"></div><figcaption class="imageCaption">Use <strong class="markup--strong markup--figure-strong">Category </strong>or move to <strong class="markup--strong markup--figure-strong">.m</strong></figcaption></figure></div></div></section>
+</section>

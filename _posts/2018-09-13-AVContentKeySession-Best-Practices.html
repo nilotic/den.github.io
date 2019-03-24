@@ -1,0 +1,83 @@
+---
+layout: post
+title:  "AVContentKeySession Best Practices"
+subtitle: "WWDC 2018"
+date:   2018-09-13 00:34:23 -0000
+background: '/img/posts/wwdc18.png'
+---
+
+
+
+
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>AVContentKeySession Best Practices</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">AVContentKeySession Best Practices</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+WWDC 2018
+</section>
+<section data-field="body" class="e-content">
+<section name="fc89" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="5994" id="5994" class="graf graf--h3 graf--leading graf--title">AVContentKeySession Best Practices</h3><h4 name="7d97" id="7d97" class="graf graf--h4 graf-after--h3 graf--subtitle"><a href="https://developer.apple.com/videos/play/wwdc2018/507/" data-href="https://developer.apple.com/videos/play/wwdc2018/507/" class="markup--anchor markup--h4-anchor" rel="noopener" target="_blank">WWDC 2018</a></h4><h3 name="50b1" id="50b1" class="graf graf--h3 graf-after--h4">FairPlay Streaming Overview</h3><ul class="postList"><li name="bb33" id="bb33" class="graf graf--li graf-after--h3">Introduced in 2015</li><li name="4434" id="4434" class="graf graf--li graf-after--li">Protects HLS streams</li><li name="6dcb" id="6dcb" class="graf graf--li graf-after--li">Specifies steps to securely deliver content decryption keys</li></ul><figure name="681b" id="681b" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 319px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 45.6%;"></div><img class="graf-image" data-image-id="1*uq13YDFys12TLwGqQXbZiw.gif" data-width="1244" data-height="567" src="https://cdn-images-1.medium.com/max/800/1*uq13YDFys12TLwGqQXbZiw.gif"></div></figure><h3 name="ed0c" id="ed0c" class="graf graf--h3 graf-after--figure">AVContentKeySession</h3><ul class="postList"><li name="8814" id="8814" class="graf graf--li graf-after--h3">Introduced in 2017</li><li name="2039" id="2039" class="graf graf--li graf-after--li">Designed around content decryption keys<br>- Simplified key loading process<br>- Home for new content protection features</li><li name="bf9f" id="bf9f" class="graf graf--li graf-after--li">Great adoption — helps optimize key delivery</li></ul><figure name="c092" id="c092" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 465px; max-height: 480px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 103.2%;"></div><img class="graf-image" data-image-id="1*Qden51hY9y23IgKCDe4cnw.gif" data-width="465" data-height="480" src="https://cdn-images-1.medium.com/max/800/1*Qden51hY9y23IgKCDe4cnw.gif"></div></figure><h3 name="96b0" id="96b0" class="graf graf--h3 graf-after--figure">AVAssetResourceLoader</h3><figure name="194d" id="194d" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 464px; max-height: 479px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 103.2%;"></div><img class="graf-image" data-image-id="1*jkXBcb573i7NSN5TEbzXrg.gif" data-width="464" data-height="479" src="https://cdn-images-1.medium.com/max/800/1*jkXBcb573i7NSN5TEbzXrg.gif"></div></figure><h3 name="2487" id="2487" class="graf graf--h3 graf-after--figure">How Do I Reduce Playback Startup Delay ?</h3><ul class="postList"><li name="1591" id="1591" class="graf graf--li graf-after--h3">Preload keys that you predict might be used</li><li name="362c" id="362c" class="graf graf--li graf-after--li">Batch up key requests — reduce round-trips to key server</li></ul><figure name="3552" id="3552" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 160px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 22.8%;"></div><img class="graf-image" data-image-id="1*IXR_czeOmwMRLtmvUG_Ndg.png" data-width="4694" data-height="1072" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*IXR_czeOmwMRLtmvUG_Ndg.png"></div></figure><h3 name="e051" id="e051" class="graf graf--h3 graf-after--figure">Could A key Be Requested Again ? YES</h3><ul class="postList"><li name="ce7c" id="ce7c" class="graf graf--li graf-after--h3">New keys might be required for decryption <br>( AirPlay, Lightning Digital AV Adpater )</li><li name="1d61" id="1d61" class="graf graf--li graf-after--li">Always be prepared to answer redundant key requests</li></ul><h3 name="6a7f" id="6a7f" class="graf graf--h3 graf-after--li">How Do I Preload All Keys ?</h3><ul class="postList"><li name="7b85" id="7b85" class="graf graf--li graf-after--h3">Need key identifier to load key</li><li name="2a05" id="2a05" class="graf graf--li graf-after--li">Obtain all key identifiers out-of-band</li><li name="4084" id="4084" class="graf graf--li graf-after--li">Advertise session keys ( <code class="markup--code markup--li-code">EXT-X-SESSION-KEY</code> ) in master m3u8<br>- Initiate preloading <code class="markup--code markup--li-code">urlAsset.resourceLoader.preloadsEligibleContentKeys = true</code></li><li name="8b8d" id="8b8d" class="graf graf--li graf-after--li"><a href="https://medium.com/@nilotic2/measuring-and-optimizing-hls-performance-bba9cbad0933" data-href="https://medium.com/@nilotic2/measuring-and-optimizing-hls-performance-bba9cbad0933" class="markup--anchor markup--li-anchor" target="_blank"><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Measuring and Optimizing HLS Performance WWDC 2018</em></strong></a></li></ul><h3 name="9e3f" id="9e3f" class="graf graf--h3 graf-after--li">How Can My Live Streams Avoid The Thundering Herd?</h3><ul class="postList"><li name="4f40" id="4f40" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">Disperse key request events 👍</strong></li><li name="032a" id="032a" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Clients rotate keys at the same time → impulse load on key server</strong></li><li name="fdc1" id="fdc1" class="graf graf--li graf-after--li">Load keys before <code class="markup--code markup--li-code">EXT-X-KEY</code> tag appears</li><li name="c523" id="c523" class="graf graf--li graf-after--li">Scale live offering by load balancing key loading requests</li><li name="e5eb" id="e5eb" class="graf graf--li graf-after--li"><a href="https://developer.apple.com/videos/play/wwdc2017/504" data-href="https://developer.apple.com/videos/play/wwdc2017/504" class="markup--anchor markup--li-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Advances in HTTP Live Streaming WWDC 2017</em></strong></a></li></ul><h3 name="94d5" id="94d5" class="graf graf--h3 graf-after--li">What is Offline Rentals ?</h3><ul class="postList"><li name="2e40" id="2e40" class="graf graf--li graf-after--h3">Define 2 expiration durations on offline FairPlay Streaming keys<br>- Storage duration<br>- Playback duration</li><li name="4a97" id="4a97" class="graf graf--li graf-after--li">Expiration durations are enforced even when the device is offline</li></ul><figure name="4bbb" id="4bbb" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 170px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 24.2%;"></div><img class="graf-image" data-image-id="1*1hd17mKYGiDpyq8_rvFiXg.gif" data-width="1280" data-height="310" src="https://cdn-images-1.medium.com/max/800/1*1hd17mKYGiDpyq8_rvFiXg.gif"></div></figure><h3 name="fe18" id="fe18" class="graf graf--h3 graf-after--figure">How Do I Do Offline Rentals ?</h3><ul class="postList"><li name="68d5" id="68d5" class="graf graf--li graf-after--h3">Use Offline Key TLLV<br>- Signaled in CKC used while requesting persistent key</li></ul><figure name="45f7" id="45f7" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 111px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 15.8%;"></div><img class="graf-image" data-image-id="1*6v1HSNtmDTDPAVJXYABIYA.png" data-width="3392" data-height="536" src="https://cdn-images-1.medium.com/max/800/1*6v1HSNtmDTDPAVJXYABIYA.png"></div></figure><h3 name="6781" id="6781" class="graf graf--h3 graf-after--figure">How Do I Do Offline Rentals ?</h3><figure name="74aa" id="74aa" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 314px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 44.9%;"></div><img class="graf-image" data-image-id="1*M-6Lj05Lrj6bDhyK1KwGfg.gif" data-width="1280" data-height="575" src="https://cdn-images-1.medium.com/max/800/1*M-6Lj05Lrj6bDhyK1KwGfg.gif"></div></figure><h3 name="f1ea" id="f1ea" class="graf graf--h3 graf-after--figure">How Do I Handle Errors While Loading Keys ?</h3><ul class="postList"><li name="ef7c" id="ef7c" class="graf graf--li graf-after--h3">When something fails…<br>- Report error to AVFoundation</li></ul><figure name="7f5b" id="7f5b" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 204px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 29.2%;"></div><img class="graf-image" data-image-id="1*jKiQVZ1f2BkOK4gN-GFQaw.png" data-width="2554" data-height="746" src="https://cdn-images-1.medium.com/max/800/1*jKiQVZ1f2BkOK4gN-GFQaw.png"></div></figure><ul class="postList"><li name="bcd3" id="bcd3" class="graf graf--li graf-after--figure">Monitor error logs and address root-cause</li><li name="c6b8" id="c6b8" class="graf graf--li graf-after--li"><a href="https://developer.apple.com/videos/play/wwdc2017/514/" data-href="https://developer.apple.com/videos/play/wwdc2017/514/" class="markup--anchor markup--li-anchor" rel="noopener" target="_blank"><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Error Handling Best Practices for HTTP Live Streaming</em></strong></a></li></ul><h3 name="08c5" id="08c5" class="graf graf--h3 graf-after--li">Common Pitfalls While Delivering Keys</h3><ul class="postList"><li name="97b5" id="97b5" class="graf graf--li graf-after--h3">Taking too long to provide key response<br>- Player times out waiting for key repsonse<br>- Deliver keys as soon as possible<br>- Survey <code class="markup--code markup--li-code">playerItem.accessLogs()</code></li><li name="4ce5" id="4ce5" class="graf graf--li graf-after--li">Using same keys across variants with different HDCP requirements<br>- HDCP requirements is signaled inside key response<br>- Use multiple key identifiers</li><li name="6c9a" id="6c9a" class="graf graf--li graf-after--li">Using persistent keys to answer all key loading requests<br>- Persistent keys cannot be shared across devices ( AirPlay )<br>- Make sure key loading request accepts persistent keys<br>- Minor API changes in iOS 11.2+</li></ul><h3 name="eec4" id="eec4" class="graf graf--h3 graf-after--li">Is Persistent Key Accepted As Response?</h3><ul class="postList"><li name="c50e" id="c50e" class="graf graf--li graf-after--h3">Using <code class="markup--code markup--li-code"><strong class="markup--strong markup--li-strong">AVContentKeySession</strong></code></li></ul><figure name="7407" id="7407" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 106px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 15.1%;"></div><img class="graf-image" data-image-id="1*7tYoWeBhSyFmGtS_3O_R5A.png" data-width="4258" data-height="644" src="https://cdn-images-1.medium.com/max/800/1*7tYoWeBhSyFmGtS_3O_R5A.png"></div></figure><ul class="postList"><li name="4b68" id="4b68" class="graf graf--li graf-after--figure">Using <code class="markup--code markup--li-code"><strong class="markup--strong markup--li-strong">AVAssetResourceLoader</strong></code></li></ul><figure name="83f5" id="83f5" class="graf graf--figure graf-after--li graf--trailing"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 92px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 13.100000000000001%;"></div><img class="graf-image" data-image-id="1*4x2nULmhZHjGk5OJ4bDqoA.png" data-width="4260" data-height="560" src="https://cdn-images-1.medium.com/max/800/1*4x2nULmhZHjGk5OJ4bDqoA.png"></div></figure></div></div></section>
+</section>

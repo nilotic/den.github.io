@@ -1,0 +1,83 @@
+---
+layout: post
+title:  "Understanding Crashes and Crash Logs"
+subtitle: "WWDC 2018"
+date:   2018-06-29 06:45:13 -0000
+background: '/img/posts/wwdc18.png'
+---
+
+
+
+
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Understanding Crashes and Crash Logs</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Understanding Crashes and Crash Logs</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+WWDC 2018
+</section>
+<section data-field="body" class="e-content">
+<section name="dda0" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="95d8" id="95d8" class="graf graf--h3 graf--leading graf--title">Understanding Crashes and Crash Logs</h3><h4 name="d238" id="d238" class="graf graf--h4 graf-after--h3 graf--subtitle"><a href="https://developer.apple.com/videos/play/wwdc2018/414/" data-href="https://developer.apple.com/videos/play/wwdc2018/414/" class="markup--anchor markup--h4-anchor" rel="noopener" target="_blank">WWDC 2018</a></h4><h3 name="eee6" id="eee6" class="graf graf--h3 graf-after--h4">Crashes Organizer</h3><p name="ea22" id="ea22" class="graf graf--p graf-after--h3"><strong class="markup--strong markup--p-strong">Xcode</strong> → <strong class="markup--strong markup--p-strong">Window</strong> → <strong class="markup--strong markup--p-strong">Organizer</strong> (<em class="markup--em markup--p-em">Shift + Command + 6</em>)</p><figure name="2b8c" id="2b8c" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 438px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 62.6%;"></div><img class="graf-image" data-image-id="1*j_pHWgORtLiaX_L0Bp1PSg.png" data-width="2874" data-height="1798" src="https://cdn-images-1.medium.com/max/800/1*j_pHWgORtLiaX_L0Bp1PSg.png"></div></figure><h3 name="daa6" id="daa6" class="graf graf--h3 graf-after--figure">Device Window</h3><p name="e5ae" id="e5ae" class="graf graf--p graf-after--h3">You can get logs from a device.</p><figure name="50da" id="50da" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 512px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 73.1%;"></div><img class="graf-image" data-image-id="1*e_X9X3gfrUabGzWq6RCFZA.gif" data-width="740" data-height="541" src="https://cdn-images-1.medium.com/max/800/1*e_X9X3gfrUabGzWq6RCFZA.gif"></div></figure><h3 name="f9f5" id="f9f5" class="graf graf--h3 graf-after--figure">Automated testing</h3><figure name="bde2" id="bde2" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 475px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 67.80000000000001%;"></div><img class="graf-image" data-image-id="1*emPKNV2qZDO7rmn9G1HQzQ.gif" data-width="795" data-height="539" src="https://cdn-images-1.medium.com/max/800/1*emPKNV2qZDO7rmn9G1HQzQ.gif"></div></figure><h3 name="5536" id="5536" class="graf graf--h3 graf-after--figure">Symbolication</h3><ul class="postList"><li name="bf60" id="bf60" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">Upload app symbols</strong> for server-side symbolication</li><li name="e935" id="e935" class="graf graf--li graf-after--li">Keep your app archive for local symbolication</li><li name="c769" id="c769" class="graf graf--li graf-after--li">Download debug symbols for bitcode apps</li></ul><h3 name="54f0" id="54f0" class="graf graf--h3 graf-after--li">Analyzing Crash Logs</h3><figure name="dc5f" id="dc5f" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 394px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.3%;"></div><img class="graf-image" data-image-id="1*icfa0fA5LRt6a3Z6SQyCsw.gif" data-width="1280" data-height="720" src="https://cdn-images-1.medium.com/max/800/1*icfa0fA5LRt6a3Z6SQyCsw.gif"></div><figcaption class="imageCaption">How to open a crash log file</figcaption></figure><figure name="97c5" id="97c5" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 1293px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 184.7%;"></div><img class="graf-image" data-image-id="1*_t2HC8uCszyjWbx-RqH5XQ.png" data-width="3288" data-height="6074" src="https://cdn-images-1.medium.com/max/800/1*_t2HC8uCszyjWbx-RqH5XQ.png"></div><figcaption class="imageCaption">Crash Log File</figcaption></figure><figure name="14ed" id="14ed" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 366px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 52.300000000000004%;"></div><img class="graf-image" data-image-id="1*9IoeKgOIAUNyTii__YmeoQ.png" data-width="3284" data-height="1718" src="https://cdn-images-1.medium.com/max/800/1*9IoeKgOIAUNyTii__YmeoQ.png"></div><figcaption class="imageCaption">Crash Hints</figcaption></figure><h3 name="2695" id="2695" class="graf graf--h3 graf-after--figure">Assertions and Preconditions</h3><ul class="postList"><li name="3f34" id="3f34" class="graf graf--li graf-after--h3">Forced unwrap of an <strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Optional</em></strong> that stores nil</li><li name="ec0b" id="ec0b" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Out of bounds</em></strong> Array access</li><li name="6158" id="6158" class="graf graf--li graf-after--li">Swift arithmetic <strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">overflow</em></strong></li><li name="1430" id="1430" class="graf graf--li graf-after--li">Uncaught <strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">exception</em></strong></li><li name="bc35" id="bc35" class="graf graf--li graf-after--li">Custom<strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em"> assertion</em></strong> in your code</li></ul><h3 name="8035" id="8035" class="graf graf--h3 graf-after--li">Terminations by the Operating System</h3><ul class="postList"><li name="589d" id="589d" class="graf graf--li graf-after--h3">Watchdog events (time out)</li><li name="5ed5" id="5ed5" class="graf graf--li graf-after--li">Device overheated</li><li name="9dda" id="9dda" class="graf graf--li graf-after--li">Memory exhaustion</li><li name="e89e" id="e89e" class="graf graf--li graf-after--li">Invalid code signature</li></ul><figure name="d587" id="d587" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 367px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 52.400000000000006%;"></div><img class="graf-image" data-image-id="1*2Wsv3P6DuNgzb3wDMcyhSA.png" data-width="3298" data-height="1728" src="https://cdn-images-1.medium.com/max/800/1*2Wsv3P6DuNgzb3wDMcyhSA.png"></div><figcaption class="imageCaption">SIGKILL</figcaption></figure><h3 name="a06d" id="a06d" class="graf graf--h3 graf-after--figure">Avoiding Launch Timeouts</h3><ul class="postList"><li name="3395" id="3395" class="graf graf--li graf-after--h3">Test your app <strong class="markup--strong markup--li-strong">without the debugger</strong></li><li name="c45f" id="c45f" class="graf graf--li graf-after--li">Test your app <strong class="markup--strong markup--li-strong">on a real device</strong></li><li name="621d" id="621d" class="graf graf--li graf-after--li">Test your app <strong class="markup--strong markup--li-strong">on older hardware</strong></li></ul><h3 name="e853" id="e853" class="graf graf--h3 graf-after--li">Memory Errors</h3><figure name="0047" id="0047" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 391px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 55.900000000000006%;"></div><img class="graf-image" data-image-id="1*DOyrPFUo9AAxISkaO8Z5YA.png" data-width="3645" data-height="2038" src="https://cdn-images-1.medium.com/max/800/1*DOyrPFUo9AAxISkaO8Z5YA.png"></div><figcaption class="imageCaption">Dangling Pointer error</figcaption></figure><h4 name="2da1" id="2da1" class="graf graf--h4 graf-after--figure">Object life cycle</h4><p name="baa1" id="baa1" class="graf graf--p graf-after--h4">Dealloc → Freed object → Rotate</p><figure name="2883" id="2883" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 348px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 49.6%;"></div><img class="graf-image" data-image-id="1*xo4_I4j-BmfSKm-XRfcUhg.gif" data-width="1277" data-height="634" src="https://cdn-images-1.medium.com/max/800/1*xo4_I4j-BmfSKm-XRfcUhg.gif"></div></figure><h3 name="390e" id="390e" class="graf graf--h3 graf-after--figure">Crash Log Analysis</h3><ul class="postList"><li name="a374" id="a374" class="graf graf--li graf-after--h3">Understand the crash reason</li><li name="829c" id="829c" class="graf graf--li graf-after--li">Examine the crashed thread’s stack trace</li><li name="dc65" id="dc65" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Look for more clues in bad address and disassembly </em>👍</strong></li></ul><figure name="0820" id="0820" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 649px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 92.7%;"></div><img class="graf-image" data-image-id="1*hj0rbZPNnx3FJXTazMwwBg.png" data-width="3619" data-height="3356" src="https://cdn-images-1.medium.com/max/800/1*hj0rbZPNnx3FJXTazMwwBg.png"></div><figcaption class="imageCaption">disassemble the log</figcaption></figure><h3 name="1281" id="1281" class="graf graf--h3 graf-after--figure">Common Memory Error Symptoms</h3><figure name="4558" id="4558" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 245px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 35%;"></div><img class="graf-image" data-image-id="1*IWjJTqlwu0mEGyOESnhL5g.png" data-width="3564" data-height="1246" src="https://cdn-images-1.medium.com/max/800/1*IWjJTqlwu0mEGyOESnhL5g.png"></div></figure><h3 name="dd9b" id="dd9b" class="graf graf--h3 graf-after--figure">Crash Analysis Tips</h3><ul class="postList"><li name="d76f" id="d76f" class="graf graf--li graf-after--h3">Look at <strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">code</em></strong> other than the line that crashed</li><li name="f52a" id="f52a" class="graf graf--li graf-after--li">Look at <strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">thread stack traces</em></strong> other than the crashed thread</li><li name="a33f" id="a33f" class="graf graf--li graf-after--li">Look at <strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">more</em></strong> than one crash <strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">log</em></strong></li><li name="116c" id="116c" class="graf graf--li graf-after--li">Use <strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Address Sanitizer </em></strong>and <strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Zombies</em></strong> to reproduce memory errors</li></ul><h3 name="ec37" id="ec37" class="graf graf--h3 graf-after--li">Multithreading Issues</h3><p name="f800" id="f800" class="graf graf--p graf-after--h3"><strong class="markup--strong markup--p-strong">Use theThread Sanitizer to fix multi-threading issues</strong></p><figure name="6ae8" id="6ae8" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 412px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 58.8%;"></div><img class="graf-image" data-image-id="1*t4ZldzRJh7oo47-7BFadFg.png" data-width="3844" data-height="2260" src="https://cdn-images-1.medium.com/max/800/1*t4ZldzRJh7oo47-7BFadFg.png"></div></figure><h3 name="8a3e" id="8a3e" class="graf graf--h3 graf-after--figure">Demo</h3><figure name="3423" id="3423" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 354px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 50.6%;"></div><img class="graf-image" data-image-id="1*J1EQQnJr_wUD7GKd4dlmQw.png" data-width="3643" data-height="1842" src="https://cdn-images-1.medium.com/max/800/1*J1EQQnJr_wUD7GKd4dlmQw.png"></div><figcaption class="imageCaption">Thread Safe</figcaption></figure><h3 name="cffa" id="cffa" class="graf graf--h3 graf-after--figure">Tips</h3><p name="7412" id="7412" class="graf graf--p graf-after--h3"><strong class="markup--strong markup--p-strong">Use the <em class="markup--em markup--p-em">thread name</em></strong></p><figure name="c6df" id="c6df" class="graf graf--figure graf-after--p graf--trailing"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 675px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 96.5%;"></div><img class="graf-image" data-image-id="1*qfC0WypqqX9Lc7gy0qkgmg.png" data-width="3578" data-height="3452" src="https://cdn-images-1.medium.com/max/800/1*qfC0WypqqX9Lc7gy0qkgmg.png"></div></figure></div></div></section>
+</section>

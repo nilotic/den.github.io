@@ -1,0 +1,81 @@
+---
+layout: post
+title:  "Authoring 4K and HDR HLS Streams"
+subtitle: "WWDC 2018"
+date:   2018-10-03 00:54:34 -0000
+background: '/img/posts/wwdc18.png'
+---
+
+
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Authoring 4K and HDR HLS Streams</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Authoring 4K and HDR HLS Streams</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Tech Talks
+</section>
+<section data-field="body" class="e-content">
+<section name="bdd0" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="7d4c" id="7d4c" class="graf graf--h3 graf--leading graf--title">Authoring 4K and HDR HLS Streams</h3><h4 name="caf5" id="caf5" class="graf graf--h4 graf-after--h3 graf--subtitle"><a href="https://developer.apple.com/videos/play/tech-talks/501/" data-href="https://developer.apple.com/videos/play/tech-talks/501/" class="markup--anchor markup--h4-anchor" rel="noopener" target="_blank">Tech Talks</a></h4><figure name="0808" id="0808" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 392px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.00000000000001%;"></div><img class="graf-image" data-image-id="1*zUTz6_9Ol2TEN94W6DPDVg.png" data-width="2726" data-height="1526" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*zUTz6_9Ol2TEN94W6DPDVg.png"></div><figcaption class="imageCaption">4K Display</figcaption></figure><figure name="9ac5" id="9ac5" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 438px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 62.5%;"></div><img class="graf-image" data-image-id="1*uERpKetisAbFSkwMO-Az4Q.png" data-width="3360" data-height="2100" src="https://cdn-images-1.medium.com/max/800/1*uERpKetisAbFSkwMO-Az4Q.png"></div></figure><h3 name="a707" id="a707" class="graf graf--h3 graf-after--figure">HDR10</h3><ul class="postList"><li name="5afa" id="5afa" class="graf graf--li graf-after--h3">Static metadata (SEI NAL units) should be in the HEVC Configuration Box</li></ul><h3 name="ee88" id="ee88" class="graf graf--h3 graf-after--li">Dolby Vision</h3><ul class="postList"><li name="dd05" id="dd05" class="graf graf--li graf-after--h3">Profile 5<br>- Single layer<br>- 10-bit HEVC</li><li name="8735" id="8735" class="graf graf--li graf-after--li">Up to level 7</li></ul><h3 name="3ad2" id="3ad2" class="graf graf--h3 graf-after--li">HDR</h3><ul class="postList"><li name="5013" id="5013" class="graf graf--li graf-after--h3">HEVC</li><li name="ad80" id="ad80" class="graf graf--li graf-after--li">Include variants ≤ 30FPS</li><li name="87c2" id="87c2" class="graf graf--li graf-after--li">SDR variants must be provided</li><li name="e6b7" id="e6b7" class="graf graf--li graf-after--li">SDR I-frame variants must be provided</li></ul><h3 name="ff65" id="ff65" class="graf graf--h3 graf-after--li">New Tag VIDEO-RANGE</h3><ul class="postList"><li name="f340" id="f340" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">Must be included if playlist includes HDR content</strong> <br>- SDR: Standard dynamic range variants<br>- PQ: HDR10 or Dolby Vision variants</li><li name="8a90" id="8a90" class="graf graf--li graf-after--li">HDCP-LEVEL<br>Specifies the minimum HDCP level required for secure playback<br>- NONE<br>- TYPE-0<br>- TYPE-1</li></ul><figure name="f49c" id="f49c" class="graf graf--figure graf-after--li graf--trailing"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 302px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 43.2%;"></div><img class="graf-image" data-image-id="1*daFUSmiCLOGi4ROFlyaGbg.png" data-width="3354" data-height="1448" src="https://cdn-images-1.medium.com/max/800/1*daFUSmiCLOGi4ROFlyaGbg.png"></div><figcaption class="imageCaption">Examples</figcaption></figure></div></div></section>
+</section>

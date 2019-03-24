@@ -1,0 +1,82 @@
+---
+layout: post
+title:  "CI (Xcode Server + Fabric )"
+subtitle: "WWDC 2018"
+date:   2018-10-17 20:23:33 -0000
+background: '/img/posts/wwdc18.png'
+---
+
+
+
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>CI (Xcode Server + Fabric )</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">CI (Xcode Server + Fabric )</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Continuous Integration
+</section>
+<section data-field="body" class="e-content">
+<section name="09c0" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="ed86" id="ed86" class="graf graf--h3 graf--leading graf--title">CI (Xcode Server + Fabric )</h3><h4 name="6897" id="6897" class="graf graf--h4 graf-after--h3 graf--subtitle">Continuous Integration</h4><h3 name="86e4" id="86e4" class="graf graf--h3 graf-after--h4">Continuous Integration 3 — Steps</h3><ol class="postList"><li name="f62f" id="f62f" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Set</em> Xcode Server</strong></li><li name="6483" id="6483" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">Set</em> Fabric</strong></li><li name="62df" id="62df" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Xcode Server + Fabric</strong></li></ol><h3 name="ae47" id="ae47" class="graf graf--h3 graf-after--li">Step 1 — Set Xcode Server</h3><ul class="postList"><li name="2bd8" id="2bd8" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">Set Xcode Server</strong><br><a href="https://medium.com/xcblog/xcode-server-with-xcode-10-124013cbedbc" data-href="https://medium.com/xcblog/xcode-server-with-xcode-10-124013cbedbc" class="markup--anchor markup--li-anchor" rel="nofollow" target="_blank"><em class="markup--em markup--li-em">https://medium.com/xcblog/xcode-server-with-xcode-10-124013cbedbc</em></a></li></ul><h3 name="cdd6" id="cdd6" class="graf graf--h3 graf-after--li">Step 2 — Set Fabric</h3><ul class="postList"><li name="926b" id="926b" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">Set Fabric</strong><br><a href="https://fabric.io/kits/ios/crashlytics/install" data-href="https://fabric.io/kits/ios/crashlytics/install" class="markup--anchor markup--li-anchor" rel="nofollow noopener noopener" target="_blank">https://fabric.io/kits/ios/crashlytics/install</a></li><li name="1ee6" id="1ee6" class="graf graf--li graf-after--li">Get the <strong class="markup--strong markup--li-strong">&lt;<em class="markup--em markup--li-em">FABRIC_API_KEY</em>&gt;</strong>, <strong class="markup--strong markup--li-strong">&lt;<em class="markup--em markup--li-em">BUILD_SECRET</em>&gt;</strong></li></ul><figure name="955e" id="955e" class="graf graf--figure graf-after--li"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 35px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 5%;"></div><img class="graf-image" data-image-id="1*KlR3eDUR_8bctY0SPYY_Jg.png" data-width="2158" data-height="108" src="https://cdn-images-1.medium.com/max/800/1*KlR3eDUR_8bctY0SPYY_Jg.png"></div></figure><h3 name="aeaf" id="aeaf" class="graf graf--h3 graf-after--figure">Step 3 — Xcode Server + Fabric</h3><h4 name="5832" id="5832" class="graf graf--h4 graf-after--h3"><strong class="markup--strong markup--h4-strong">Xcode Server Script</strong></h4><blockquote name="18af" id="18af" class="graf graf--blockquote graf-after--h4"><strong class="markup--strong markup--blockquote-strong"><em class="markup--em markup--blockquote-em"># Make the the encoding is correct</em></strong><em class="markup--em markup--blockquote-em"><br></em>export LANG=en_US.UTF-8</blockquote><blockquote name="5b4b" id="5b4b" class="graf graf--blockquote graf-after--blockquote"><strong class="markup--strong markup--blockquote-strong"><em class="markup--em markup--blockquote-em"># Remove &amp; Copy assets</em></strong><em class="markup--em markup--blockquote-em"><br></em>rm -r ${XCS_SOURCE_DIR}/ipa</blockquote><blockquote name="6f4c" id="6f4c" class="graf graf--blockquote graf-after--blockquote">cp -R ${XCS_OUTPUT_DIR}/ExportedProduct/Apps/ ${XCS_SOURCE_DIR}/ipa/</blockquote><blockquote name="9c92" id="9c92" class="graf graf--blockquote graf-after--blockquote"><strong class="markup--strong markup--blockquote-strong"><em class="markup--em markup--blockquote-em"># Release Note</em></strong><em class="markup--em markup--blockquote-em"><br></em>git — git-dir ${XCS_SOURCE_DIR}/<strong class="markup--strong markup--blockquote-strong"><em class="markup--em markup--blockquote-em">Your_Project_Name</em></strong>/.git log — format=”%cn: %s” -n 1 &gt; ${XCS_SOURCE_DIR}/release_notes.txt</blockquote><blockquote name="c9e8" id="c9e8" class="graf graf--blockquote graf-after--blockquote"><strong class="markup--strong markup--blockquote-strong"><em class="markup--em markup--blockquote-em"># Release the archive</em></strong><em class="markup--em markup--blockquote-em"><br></em>${XCS_PRIMARY_REPO_DIR}/Pods/Crashlytics/submit <strong class="markup--strong markup--blockquote-strong"><em class="markup--em markup--blockquote-em">FABRIC_API_KEY</em></strong> <strong class="markup--strong markup--blockquote-strong"><em class="markup--em markup--blockquote-em">BUILD_SECRET</em></strong> -ipaPath ${XCS_SOURCE_DIR}/ipa/<strong class="markup--strong markup--blockquote-strong"><em class="markup--em markup--blockquote-em">Your_Project_Name</em></strong>.ipa -notesPath ${XCS_SOURCE_DIR}/release_notes.txt -groupAliases <strong class="markup--strong markup--blockquote-strong"><em class="markup--em markup--blockquote-em">Your _GroupAliasesName</em></strong> -notifications YES</blockquote><figure name="9237" id="9237" class="graf graf--figure graf-after--blockquote"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 387px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 55.2%;"></div><img class="graf-image" data-image-id="1*Vu_yB567_TaehwL_ydpHvw.png" data-width="1852" data-height="1023" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*Vu_yB567_TaehwL_ydpHvw.png"></div></figure><h3 name="2a4c" id="2a4c" class="graf graf--h3 graf-after--figure">Defines</h3><ul class="postList"><li name="03e0" id="03e0" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">XCS_ANALYZER_WARNING_CHANGE</strong>=0</li><li name="07e7" id="07e7" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_ANALYZER_WARNING_COUNT</strong>=0</li><li name="c19a" id="c19a" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_ARCHIVE</strong>=/Library/Developer/XcodeServer/Integrations/Integration-76eb5292bd7eff1bfe4160670c2d4576/Archive.xcarchive</li><li name="2c1d" id="2c1d" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_BOT_ID</strong>=4f7c7e65532389e2a741d29758466c18</li><li name="b5c5" id="b5c5" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_BOT_NAME</strong>=’Reader’</li><li name="1497" id="1497" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_BOT_TINY_ID</strong>=00B0A7D</li><li name="6dac" id="6dac" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_ERROR_CHANGE</strong>=0</li><li name="5098" id="5098" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_ERROR_COUNT</strong>=0</li><li name="de9f" id="de9f" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_INTEGRATION_ID</strong>=76eb5292bd7eff1bfe4160670c2d4576</li><li name="8ad6" id="8ad6" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_INTEGRATION_NUMBER</strong>=15</li><li name="abbd" id="abbd" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_INTEGRATION_RESULT</strong>=warnings</li><li name="3343" id="3343" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_INTEGRATION_TINY_ID</strong>=FF39BC2</li><li name="734f" id="734f" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_OUTPUT_DIR</strong>=/Library/Developer/XcodeServer/Integrations/Integration-76eb5292bd7eff1bfe4160670c2d4576</li><li name="76be" id="76be" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_PRODUCT</strong>=’Reader.ipa’</li><li name="e12f" id="e12f" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_SOURCE_DIR</strong>=/Library/Developer/XcodeServer/Integrations/Caches/4f7c7e65532389e2a741d29758466c18/Source</li><li name="6189" id="6189" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_TESTS_CHANGE</strong>=0</li><li name="ce93" id="ce93" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_TESTS_COUNT</strong>=0</li><li name="8bf4" id="8bf4" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_TEST_FAILURE_CHANGE</strong>=0</li><li name="d6cd" id="d6cd" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_TEST_FAILURE_COUNT</strong>=0</li><li name="aa8a" id="aa8a" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">XCS_WARNING_CHANGE</strong>=36</li><li name="5f79" id="5f79" class="graf graf--li graf-after--li graf--trailing"><strong class="markup--strong markup--li-strong">XCS_WARNING_COUNT</strong>=36</li></ul></div></div></section>
+</section>
